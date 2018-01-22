@@ -41,7 +41,7 @@ git config user.email "guardeivid@yahoo.com.ar"
 ```git
 [user]
 	name = Guardeivid
-	email = guardeivid@yahoo.com.ar
+	email = guardeivid@example.com
 [color]
 	status = auto
 	branch = auto
@@ -57,23 +57,41 @@ git config --global color.diff auto
 git config --global color.interactive auto
 ```
 
-##Clonar Repositorio de cero (*crea la carpeta del proyecto dentro del directorio actual*)
+###Clonar Repositorio de cero (*crea la carpeta del proyecto dentro del directorio actual*)
 ```sh
 git clone https://github.com/guardeivid/aiuta.git
 ```
 
-##Crear repositorio de cero
+###Crear repositorio de cero
 ```sh
 mkdir aiuta
 cd aiuta
 git init
 ```
 
-##Actualizar repositorio desde la web
+###Actualizar repositorio desde la web
 ```sh
 cd aiuta
 git pull https://github.com/guardeivid/aiuta.git
 ```
+
+###Agregar archivos al repositorio, sin las excepciones del archivo **,gitignore**
+```sh
+cd aiuta
+git add *
+```
+
+###Verificar lo que añadió al repositorio
+```sh
+cd aiuta
+git status
+```
+
+git commit -m 'Subo la estructura del proyecto al repositorio de GitHub'
+git remote add origin https://github.com/guardeivid/aiuta.git
+git push -u origin master
+
+git push https://github.com/guardeivid/aiuta.git
 
 
 #Autenticarse con GitHub desde Git
