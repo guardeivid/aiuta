@@ -1,5 +1,4 @@
 # Instalación de Git
----
 
 ## Debian/Ubuntu
 
@@ -15,9 +14,11 @@ sudo apt update; sudo apt install git
 ```
 
 Version
-`git --version`
+```sh
+git --version
+```
 
-# Configurando su nombre de usuario  y email Git para todos los repositorio en su computadora
+## Configurando su nombre de usuario  y email Git para todos los repositorio en su computadora
 ```sh
 git config --global user.name "Guardeivid"
 git config --global user.email "guardeivid@yahoo.com.ar"
