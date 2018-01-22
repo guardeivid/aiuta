@@ -33,7 +33,7 @@ git config --global user.email
 Para un repositorio individual cambiar al directorio del repositorio local
 ```sh
 git config user.name "Guardeivid"
-git config user.email "guardeivid@yahoo.com.ar"
+git config user.email "guardeivid@example.com"
 ```
 
 > Esta información se guardará en un fichero en nuestro directorio home 
