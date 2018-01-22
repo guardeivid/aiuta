@@ -1,7 +1,7 @@
-#Instalación de Git
+# Instalación de Git
 ---
 
-##Debian/Ubuntu
+## Debian/Ubuntu
 
 Para la última versión estable para tu release de Debian/Ubuntu
 ```sh
@@ -17,7 +17,7 @@ sudo apt update; sudo apt install git
 Version
 `git --version`
 
-#Configurando su nombre de usuario  y email Git para todos los repositorio en su computadora
+# Configurando su nombre de usuario  y email Git para todos los repositorio en su computadora
 ```sh
 git config --global user.name "Guardeivid"
 git config --global user.email "guardeivid@yahoo.com.ar"
@@ -57,31 +57,31 @@ git config --global color.diff auto
 git config --global color.interactive auto
 ```
 
-###Clonar Repositorio de cero (*crea la carpeta del proyecto dentro del directorio actual*)
+### Clonar Repositorio de cero (*crea la carpeta del proyecto dentro del directorio actual*)
 ```sh
 git clone https://github.com/guardeivid/aiuta.git
 ```
 
-###Crear repositorio de cero
+### Crear repositorio de cero
 ```sh
 mkdir aiuta
 cd aiuta
 git init
 ```
 
-###Actualizar repositorio desde la web
+### Actualizar repositorio desde la web
 ```sh
 cd aiuta
 git pull https://github.com/guardeivid/aiuta.git
 ```
 
-###Agregar archivos al repositorio, sin las excepciones del archivo **,gitignore**
+### Agregar archivos al repositorio, sin las excepciones del archivo **,gitignore**
 ```sh
 cd aiuta
 git add *
 ```
 
-###Verificar lo que añadió al repositorio
+### Verificar lo que añadió al repositorio
 ```sh
 cd aiuta
 git status
@@ -94,7 +94,7 @@ git push -u origin master
 git push https://github.com/guardeivid/aiuta.git
 
 
-#Autenticarse con GitHub desde Git
+# Autenticarse con GitHub desde Git
 ---
 
 
@@ -103,10 +103,10 @@ git push https://github.com/guardeivid/aiuta.git
 
 
 
-#GitHub
+# GitHub
 ---
 
-##Crear un nuevo repositorio
+## Crear un nuevo repositorio
 
 Nombre del repositorio
 > auita
@@ -125,7 +125,7 @@ Descripción
 
 
 
-##Wiki
+## Wiki
 ---
 
 > **Crear la primer página**
