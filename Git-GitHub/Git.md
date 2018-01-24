@@ -76,7 +76,7 @@ cd aiuta
 git pull https://github.com/guardeivid/aiuta.git
 ```
 
-### Agregar archivos al repositorio, sin las excepciones del archivo **,gitignore**
+### Agregar archivos al repositorio, sin las excepciones del archivo _**.gitignore**_
 ```sh
 cd aiuta
 git add *
