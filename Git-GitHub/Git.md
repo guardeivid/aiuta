@@ -80,11 +80,6 @@ git init
 
 > Operaciones Dentro del proyecto **aiuta** `cd aiuta`
 
-### Actualizar repositorio desde la web a local
-```sh
-git pull https://github.com/guardeivid/aiuta.git
-```
-
 ### Agregar archivos nuevos o modificados al índice del repositorio para versionar en el próximo _**commit**_
 No incluye las excepciones del archivo _**.gitignore**_
 ```sh
@@ -137,6 +132,8 @@ Otros comandos útiles
 ### Actualizando repositorio local desde el remoto
 ```
 git pull
+o
+git pull https://github.com/guardeivid/aiuta.git
 ```
 
 
