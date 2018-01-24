@@ -36,6 +36,14 @@ git config user.name "Guardeivid"
 git config user.email "guardeivid@example.com"
 ```
 
+Otras configuraciones
+```sh
+git config --global color.status auto
+git config --global color.branch auto
+git config --global color.diff auto
+git config --global color.interactive auto
+```
+
 > Esta información se guardará en un fichero en nuestro directorio home 
 > (por defecto **~/.gitconfig**).
 
@@ -48,14 +56,6 @@ git config user.email "guardeivid@example.com"
 	branch = auto
 	diff = auto
 	interactive = auto
-```
-
-Otras configuraciones
-```sh
-git config --global color.status auto
-git config --global color.branch auto
-git config --global color.diff auto
-git config --global color.interactive auto
 ```
 
 ### Clonar Repositorio de cero (*crea la carpeta del proyecto dentro del directorio actual*)
