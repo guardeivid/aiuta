@@ -57,52 +57,105 @@ git config --global color.interactive auto
 	diff = auto
 	interactive = auto
 ```
+## Operaciones básicas con Git
 
-### Clonar Repositorio de cero (*crea la carpeta del proyecto dentro del directorio actual*)
+### Clonar Repositorio de cero desde la web a local 
+Importa un repositorio externo dentro del directorio actual
 ```sh
 git clone https://github.com/guardeivid/aiuta.git
 ```
+```
+| directorio_actual
+  		   |
+		   | aiuta
+```
 
-### Crear repositorio de cero
+### Crear repositorio de cero en local
+Crear un directorio y dentro iniciar el gestor de git
 ```sh
 mkdir aiuta
 cd aiuta
 git init
 ```
 
-### Actualizar repositorio desde la web
+> Operaciones Dentro del proyecto **aiuta** `cd aiuta`
+
+### Actualizar repositorio desde la web a local
 ```sh
-cd aiuta
 git pull https://github.com/guardeivid/aiuta.git
 ```
 
-### Agregar archivos al repositorio, sin las excepciones del archivo _**.gitignore**_
+### Agregar archivos nuevos o modificados al índice del repositorio para versionar en el próximo _**commit**_
+No incluye las excepciones del archivo _**.gitignore**_
 ```sh
-cd aiuta
+git add file1 file2 file3
+```
+
+O utilizando un comodín para agregar todos los archivos
+```sh
 git add *
 ```
 
-### Verificar lo que añadió al repositorio
+### Para saber lo que está pendiente de hacer commit
 ```sh
-cd aiuta
+git diff --cached
+```
+
+### También se puede verificar lo que se añadió al índice del repositorio
+```sh
 git status
 ```
 
+### Pasar los cambios a la versión actual del repositorio local con `git commit` (confirma los cambios)
+Con *-m* se puede ingresar un mensaje para llevar control de los cambios realizados
 ```sh
 git commit -m 'Subo la estructura del proyecto al repositorio de GitHub'
-git remote add origin https://github.com/guardeivid/aiuta.git
-git push -u origin master
+```
 
+### Una manera rápida de actualizar el repositorio local sin utilizar `git add ...`
+Sólo sirve para los archivos modificados, para los nuevos si haty que utilizar `git add ...`
+```sh
+git commit -a -m 'Cambios en el proyecto'
+```
+
+### Subir y unir la nueva versión del repositorio local hacia el repositorio remoto central
+> git push [url] [branch]
+```sh
 git push https://github.com/guardeivid/aiuta.git
 ```
 
+#### Se puede crear un alias de la URL añadiendo un repositorio remoto
+> git remote add [nombre] [url]
+```
+git remote add origin https://github.com/guardeivid/aiuta.git
+git push -u origin master
+```
+
+Otros comandos útiles
+`git remote` `git remote -v`
+
+### Actualizando repositorio local desde el remoto
+```
+git pull
+```
+
+
+### Inspeccionando un repositorio remoto
+> git remote show [nombre]
+```
+git remote show origin
+```
+
+
+
+## Links de interés
+- [Pro Git book en español](https://git-scm.com/book/es/v1/)
+
+
+
+
 # Autenticarse con GitHub desde Git
 ---
-
-
-
-
-
 
 
 # GitHub
