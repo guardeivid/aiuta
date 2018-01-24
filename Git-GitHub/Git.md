@@ -21,7 +21,7 @@ git --version
 ## Configurando su nombre de usuario  y email Git para todos los repositorio en su computadora
 ```sh
 git config --global user.name "Guardeivid"
-git config --global user.email "guardeivid@yahoo.com.ar"
+git config --global user.email "guardeivid@example.com"
 ```
 
 Confirmar nombre y usuario
@@ -88,12 +88,13 @@ cd aiuta
 git status
 ```
 
+```sh
 git commit -m 'Subo la estructura del proyecto al repositorio de GitHub'
 git remote add origin https://github.com/guardeivid/aiuta.git
 git push -u origin master
 
 git push https://github.com/guardeivid/aiuta.git
-
+```
 
 # Autenticarse con GitHub desde Git
 ---
