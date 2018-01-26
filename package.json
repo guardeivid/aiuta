@@ -1,0 +1,25 @@
+{
+  "name": "aiuta",
+  "version": "1.0.0",
+  "description": "Breves ayudas y recordatorios de tareas realizadas",
+  "main": "Node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guardeivid/aiuta.git"
+  },
+  "keywords": [
+    "Ayuda"
+  ],
+  "author": "Guardeivid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guardeivid/aiuta/issues"
+  },
+  "homepage": "https://github.com/guardeivid/aiuta#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
