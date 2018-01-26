@@ -131,8 +131,6 @@ Otros comandos útiles
 
 ### Actualizando repositorio local desde el remoto
 ```
-git pull
-o
 git pull https://github.com/guardeivid/aiuta.git
 ```
 
@@ -147,6 +145,7 @@ git remote show origin
 
 ## Links de interés
 - [Pro Git book en español](https://git-scm.com/book/es/v1/)
+- [git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
 
 
 
