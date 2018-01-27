@@ -29,7 +29,34 @@ Primero será gulp
 npm install --save-dev gulp
 ```
 
-Luego otras que necesitemos
+### Bower
+Obtiene los paquetes necesarios para el desarrollo de nuestra plantilla (Bootstrap, jQuery, etc.)
+Para usar Bower necesitamos git y si estamos trabajando en Windows necesitamos instalar correctamente msysgit. Durante la instalación de msysgit tenemos que elegir la opción "Run Git from the Windows Command Prompt".
+
+Bower nos instalará automáticamente los paquetes en la carpeta "bower-components"
+
+```
+npm install -g bower
+```
+
+Se creará un archivo de configuración **bower.json** y cada vez que instalemos un paquete usando `-save-dev` se agregará la dependencia en la configuración.
+```
+bower init
+```
+
+Se pueden hacer búsquedas de paquetes
+
+```
+bower search bootstrap
+```
+Y para instalar
+
+```
+bower install bootstrap --save-dev
+bower install font-awesome --save-dev
+```
+
+Luego se instalan otras dependencias que necesitemos
 
 #### GULP-CONCAT
 Sirve para concatenar archivos. Concatena archivos usando el salto de línea (newLine) desde el sistema operativo.
@@ -219,12 +246,52 @@ gulp.task('index', function () {
 });
 ```
 
+#### gulp-autoprefixer 
+Agrega los prefijos necesarios para distintos navegadores en los estilos css
+
+```
+npm install gulp-autoprefixer --save-dev
+```
+
+#### gulp-notify
+Para mostrar errores
+
+```
+npm install gulp-notify --save-dev
+```
+
+
+```js
+var notify = require('gulp-notify');
+
+gulp.task('cssdev', function(){
+return gulp.src('assets/less/simple.less')
+.pipe(less())
+.on('error',function (err) {
+console.log(err.toString());
+this.emit('end');
+})
+.pipe(autoprefixer('last 20 version'))
+.pipe(notify('cssdev done'))
+.pipe(gulp.dest(targetCss))
+.pipe(reload({stream:true}));
+});
+```
+
+#### browser-sync
+Nos actualiza el navegador automáticamente cada vez que hacemos un cambio en los archivos de la plantilla
+
+```
+npm install browser-sync --save-dev
+```
+
 Links
  - [GULP.JS EN ESPAÑOL – TUTORIAL BÁSICO Y PRIMEROS PASOS](https://frontendlabs.io/1669--gulp-js-en-espanol-tutorial-basico-primeros-pasos-y-ejemplos)
  -[https://github.com/contra/gulp-concat](https://github.com/contra/gulp-concat)
  - [https://github.com/hparra/gulp-rename](https://github.com/hparra/gulp-rename)
  - [https://github.com/sindresorhus/gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
  - [https://github.com/klei/gulp-inject](https://github.com/klei/gulp-inject)
+ - [https://magazine.joomla.org/es/ediciones-anteriores/item/2800-como-utilizar-gulp-en-el-desarrollo-de-plantillas](https://magazine.joomla.org/es/ediciones-anteriores/item/2800-como-utilizar-gulp-en-el-desarrollo-de-plantillas)
 
 
 
