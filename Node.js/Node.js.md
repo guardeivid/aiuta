@@ -44,7 +44,7 @@ Ejecutar el script
 sudo bash nodesource_setup.sh
 ```
 
-Luego instalar nodejs ynpm (incluido)
+Luego instalar nodejs y npm (incluido)
 ```
 sudo apt-get install nodejs
 ```
