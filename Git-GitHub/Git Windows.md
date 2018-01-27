@@ -28,3 +28,16 @@ git pull https://github.com/guardeivid/aiuta.git
 git add *
 git commit -m 'Gulp'
 git push --set-upstream https://github.com/guardeivid/aiuta.git master
+
+### Almacenar usuario y contraseña
+
+#### Cache
+Se almacena por un periodo de tiempo, por defecto es 900 segundos o 15 minutos
+git config --global credential.helper cache --timeout <seconds>
+> git config --global credential.helper cache
+
+#### Store
+Almacena en un archivo de texto las credenciales
+--file <path> defecto ~/.git-credentials).
+> git config --global credential.helper 'store --file ~/.my-credentials'
+
