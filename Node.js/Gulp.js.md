@@ -171,7 +171,7 @@ gulp.task('min', function() {
                .pipe(debug({verbose: true})
                .pipe(gulp.dest('dist/scripts/'))
 });
-```
+``` 
 #### GULP-MINIFY-CSS
 Plugin de Gulp.js que sirve para minificar archivos css con clean-css.
 
