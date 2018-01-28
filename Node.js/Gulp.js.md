@@ -1,5 +1,5 @@
 ## Gulp.js
-Automatizar tareas de desarrollo 
+Automatizar tareas de desarrollo
 
 Reuiere [Node.js](http://nodejs.org/),
  Ver [Guía](https://github.com/guardeivid/aiuta/blob/master/Node.js/Node.js.md)
@@ -11,7 +11,7 @@ npm install -g gulp
 Ver versión
 ```
 gulp -v
-```
+``` 
 
 Iniciar proyecto node.js dentro de la carpeta `aiuta`
 ```
@@ -225,7 +225,7 @@ npm install --save-dev gulp-inject
   <!-- endinject -->
 </head>
 <body>
-  
+
   <!-- inject:js -->
   <!-- endinject -->
 </body>
@@ -236,17 +236,17 @@ npm install --save-dev gulp-inject
 ```js
 var gulp = require('gulp');
 var inject = require("gulp-inject");
-  
+
 gulp.task('index', function () {
   var target = gulp.src('./index.html');
   var sources = gulp.src(['./js/*.js', './css/*.css'], {read: false});
-  
+
   return target.pipe(inject(sources))
     .pipe(gulp.dest('./src'));
 });
 ```
 
-#### gulp-autoprefixer 
+#### gulp-autoprefixer
 Agrega los prefijos necesarios para distintos navegadores en los estilos css
 
 ```
@@ -292,6 +292,3 @@ Links
  - [https://github.com/sindresorhus/gulp-imagemin](https://github.com/sindresorhus/gulp-imagemin)
  - [https://github.com/klei/gulp-inject](https://github.com/klei/gulp-inject)
  - [https://magazine.joomla.org/es/ediciones-anteriores/item/2800-como-utilizar-gulp-en-el-desarrollo-de-plantillas](https://magazine.joomla.org/es/ediciones-anteriores/item/2800-como-utilizar-gulp-en-el-desarrollo-de-plantillas)
-
-
-
