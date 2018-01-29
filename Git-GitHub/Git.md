@@ -196,7 +196,7 @@ git remote show origin
 
 
 
-
+---
 # Autenticarse con GitHub desde Git
 ---
 
