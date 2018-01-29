@@ -109,7 +109,7 @@ git commit -m 'Subo la estructura del proyecto al repositorio de GitHub'
 ```
 
 ### Una manera rápida de actualizar el repositorio local sin utilizar `git add ...`
-Sólo sirve para los archivos modificados, para los nuevos si haty que utilizar `git add ...`
+Sólo sirve para los archivos modificados, para los nuevos si hay que utilizar `git add ...`
 ```sh
 git commit -a -m 'Cambios en el proyecto'
 ```
