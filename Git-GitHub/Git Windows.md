@@ -10,32 +10,32 @@ Descargar Git de la página [https://git-scm.com/downloads](https://git-scm.com/
 1. (Licencia) ***Siguiente***
 2. (Seleccionar componentes) ***Siguiente***
 3. (Elegir el editor por defecto) y ***Siguiente***
-- [x] nano
-- [ ] vim
-- [ ] notepad++
+	- [x] nano
+	- [ ] vim
+	- [ ] notepad++
 4. (Ajustar variable de entorno PATH) y ***Siguiente***
-- [x] Git desde Git Bash
-- [ ] Git desde Consola de Windows
-- [ ] Usar Git y opciones UNIX desde la Consola de Windows  
+	- [x] Git desde Git Bash
+	- [ ] Git desde Consola de Windows
+	- [ ] Usar Git y opciones UNIX desde la Consola de Windows  
 5. (Elegir el ejecutable SSH) y ***Siguiente***
-- [x] Usar OpenSSH 
-- [ ] Usar (Tortoise) Plink
+	- [x] Usar OpenSSH 
+	- [ ] Usar (Tortoise) Plink
 6. (Elegir transporte bakend HTTPS) y ***Siguiente***
-- [x] Usar la librería OpenSSH,
-- [ ] Usar la librería Windows Secure Channel
+	- [x] Usar la librería OpenSSH,
+	- [ ] Usar la librería Windows Secure Channel
 7. (Configurando el fin de línea de archivos de texto) y ***Siguiente***
-- [x] Estilo Windows (LF->CRLF->LF) 
-- [ ] Estilo Unix (CRLF->LF),
-- [ ] Sin conversión
+	- [x] Estilo Windows (LF->CRLF->LF) 
+	- [ ] Estilo Unix (CRLF->LF)
+	- [ ] Sin conversión
 8. (Configurando el emulador para usar Git Bash) y ***Siguiente***
-- [x] Usar MinTTY
-- [ ] Usar la consola de Windows
+	- [x] Usar MinTTY
+	- [ ] Usar la consola de Windows
 9. (Configurando opciones extras) y ***Siguiente***
-- [x] Activar sistema de cacheo de archivos
-- [ ] Activar Git Credential Manager
-- [ ] Activar enlaces simbólicos
+	- [x] Activar sistema de cacheo de archivos
+	- [ ] Activar Git Credential Manager
+	- [ ] Activar enlaces simbólicos
 10. (Configurando opciones experimentales) y ***Siguiente***
-- [ ] Activar opciones experimentales 
+	- [ ] Activar opciones experimentales 
 
 
 ### Git Credential Manager for Windows v1.14.0
