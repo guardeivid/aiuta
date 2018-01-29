@@ -63,9 +63,9 @@ También se puede descargar desde el cliente GUI [GitHub Desktop](http://windows
 
 ### Instalación GitHub Desktop
 
-1- (Ingresar en GitHub.com) **Nombre de usuario o email** **Contraseña** *Ingresar*
-2- (Configurar Git) **Nombre**  **Mail** *Continuar*
-3- (Hacer GitHub Desktop mejor) [] Enviar anónimamente datos de uso *Finalizar*
+1. (Ingresar en GitHub.com) **Nombre de usuario o email** **Contraseña** *Ingresar*
+2. (Configurar Git) **Nombre**  **Mail** *Continuar*
+3. (Hacer GitHub Desktop mejor) [] Enviar anónimamente datos de uso *Finalizar*
 
 ### Uso de GitHub Desktop
 
