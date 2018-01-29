@@ -83,4 +83,4 @@ También se puede descargar desde el cliente GUI [GitHub Desktop](http://windows
 * Click en **Fetch origin** para copiar cambios desde el repositorio remoto al local
 * Modificar o crear archivos en el proyecto (detecta cambios en local)
 * Escribir en **Summary** y click en **Commit**
-* Click en 
+* Click en **Push Origin**
