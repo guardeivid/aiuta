@@ -57,6 +57,7 @@ git config --global color.interactive auto
 	diff = auto
 	interactive = auto
 ```
+
 ## Operaciones básicas con Git
 
 ### Clonar Repositorio de cero desde la web a local 
@@ -125,6 +126,52 @@ git push https://github.com/guardeivid/aiuta.git
 git remote add origin https://github.com/guardeivid/aiuta.git
 git push -u origin master
 ```
+
+#### Crear nueva rama (branch) y cambiar a esa rama
+```
+git branch branch_tmp [basado en rama_existente]
+git checkout branch_tmp
+```
+Atajo para crear y cambiar a la nueva rama creada
+```
+git checkout -b branch_tmp
+```
+> Todo cambio será realizado sobre la rama actual
+
+#### Comprobar en que rama se encuentra
+```
+git branch
+```
+
+#### Comprobar diferencias entre ramas
+```
+git diff --stat master branch_tmp
+```
+
+
+#### Mezclar archivos de diferentes ramas
+Paso 1: En repositorio local, traer los cambios y testearlos
+```
+git fetch origin
+git checkout -b branch_tmp origin/branch_tmp
+git merge master
+```
+
+Paso 2: Unir **Merge** los cambios y actualizar en repositorio remoto
+```
+git checkout master
+git merge --no-ff branch_tmp
+git push origin master
+```
+
+#### Eliminar rama
+```
+git branch -d branch_tmp
+```
+
+#### Resolver conflictos
+Si se edita un archivo sin antes hacer merge y/o push, en diferentes ramas o de diferentes repositorios (local,remoto)
+
 
 Otros comandos útiles
 `git remote` `git remote -v`
