@@ -68,9 +68,9 @@ sudo apt-get install build-essential
 
 
 
-mkdir compartida_win
-sudo mount -o uid=1000,gid=1000 -t vboxsf compartida ~/compartida_win
+> mkdir compartida_win
+> sudo mount -o uid=1000,gid=1000 -t vboxsf compartida ~/compartida_win
 
-cp -r Node.js/ ~/aiuta
+> cp -r Node.js/ ~/aiuta
 
 
