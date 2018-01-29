@@ -74,3 +74,8 @@ sudo apt-get install build-essential
 > cp -r Node.js/ ~/aiuta
 
 
+## En Windows
+
+### Instalar Node.js y npm
+
+> https://nodejs.org/es/download/

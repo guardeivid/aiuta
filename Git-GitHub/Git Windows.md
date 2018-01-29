@@ -5,23 +5,18 @@
 > https://code.visualstudio.com/Download
 
 ### Instalar Git
+Descargar Git de la página [https://git-scm.com/downloads](https://git-scm.com/downloads), que incluye línea de comandos
 
-> https://git-scm.com/download/win
-
-1. (Licencia) *Siguiente*
-2. (Seleccionar componentes) *Siguiente*
-3. (Elegir el editor por defecto) [X] nano, [] vim, [] notepad++ *Siguiente*
-4. (Ajustar variable de entorno PATH) [X] Git desde Git Bash, [] Git desde Consola de Windows , []Usar Git y opciones UNIX desde la Consola de Windows  *Siguiente*
-5. (Elegir el ejecutable SSH) [X] Usar OpenSSH, [] Usar (Tortoise) Plink  *Siguiente*
-6. (Elegir transporte bakend HTTPS) [X] Usar la librería OpenSSH, [] Usar la librería Windows Secure Channel *Siguiente*
-7. (Configurando el fin de línea de archivos de texto) [X] Estilo Windows (LF->CRLF->LF) [] Estilo Unix (CRLF->LF), [] Sin conversión *Siguiente*
-8. (Configurando el emulador para usar Git Bash) [X] Usar MinTTY, [] Usar la consola de Windows *Siguiente*
-9. (Configurando opciones extras) [X] Activar sistema de cacheo de archivos, [] Activar Git Credential Manager, [] Activar enlaces simbólicos *Siguiente*
-10. (Configurando opciones experimentales) [] Activar opciones experimentales *Siguiente*
-
-### Instalar Node.js y npm
-
-> https://nodejs.org/es/download/
+1. (Licencia) ***Siguiente***
+2. (Seleccionar componentes) ***Siguiente***
+3. (Elegir el editor por defecto) - [x] nano, - [] vim, - [] notepad++ ***Siguiente***
+4. (Ajustar variable de entorno PATH) - [x] Git desde Git Bash, - [] Git desde Consola de Windows , - [] Usar Git y opciones UNIX desde la Consola de Windows  ***Siguiente***
+5. (Elegir el ejecutable SSH) - [x] Usar OpenSSH, - [] Usar (Tortoise) Plink  ***Siguiente***
+6. (Elegir transporte bakend HTTPS) - [x] Usar la librería OpenSSH, - [] Usar la librería Windows Secure Channel ***Siguiente***
+7. (Configurando el fin de línea de archivos de texto) - [x] Estilo Windows (LF->CRLF->LF) - [] Estilo Unix (CRLF->LF), - [] Sin conversión ***Siguiente***
+8. (Configurando el emulador para usar Git Bash) - [x] Usar MinTTY, - [] Usar la consola de Windows ***Siguiente***
+9. (Configurando opciones extras) - [x] Activar sistema de cacheo de archivos, [] Activar Git Credential Manager, - [] Activar enlaces simbólicos ***Siguiente***
+10. (Configurando opciones experimentales) - [] Activar opciones experimentales *Siguiente*
 
 
 ### Git Credential Manager for Windows v1.14.0
@@ -56,16 +51,14 @@ Almacena en un archivo de texto las credenciales
 
 ## GitHub Destokp en Windows
 
-Descargar Git de la página [https://git-scm.com/downloads](https://git-scm.com/downloads), que incluye línea de comandos
-
-También se puede descargar desde el cliente GUI [GitHub Desktop](http://windows.github.com)
+> Cliente GUI [GitHub Desktop](http://windows.github.com)
 
 
 ### Instalación GitHub Desktop
 
-1. (Ingresar en GitHub.com) **Nombre de usuario o email** **Contraseña** *Ingresar*
-2. (Configurar Git) **Nombre**  **Mail** *Continuar*
-3. (Hacer GitHub Desktop mejor) [] Enviar anónimamente datos de uso *Finalizar*
+1. (Ingresar en GitHub.com) **Nombre de usuario o email** y **Contraseña** luego ***Ingresar***
+2. (Configurar Git) **Nombre** y **Mail** luego ***Continuar***
+3. (Hacer GitHub Desktop mejor) - [] Enviar anónimamente datos de uso, click en ***Finalizar***
 
 ### Uso de GitHub Desktop
 
