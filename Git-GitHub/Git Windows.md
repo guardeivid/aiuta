@@ -80,7 +80,7 @@ También se puede descargar desde el cliente GUI [GitHub Desktop](http://windows
   
 ### Flujo de trabajo
 
-* Click en **Fetch origin** para copiar cambios desde el repositorio remoto al local (_**~ git pull [url]**_)
-* Modificar o crear archivos en el proyecto (detecta cambios en local) (*__~ git add *__*)
-* Escribir en **Summary** y click en **Commit** (*__~ git -m mensaje__*)
-* Click en **Push Origin** para enviar las modificaciones al repositorio remoto (*__~ git push origin master__*)
+* Click en **Fetch origin** para copiar cambios desde el repositorio remoto al local (*`~ git pull [url]`*)
+* Modificar o crear archivos en el proyecto (detecta cambios en local) (*`~ git add *`*)
+* Escribir en **Summary** y click en **Commit** (*`~ git -m mensaje`*)
+* Click en **Push Origin** para enviar las modificaciones al repositorio remoto (*`~ git push origin master`*)
