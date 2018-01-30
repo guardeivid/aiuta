@@ -216,6 +216,7 @@ git remote show origin
 ## Links de interés
 - [Pro Git book en español](https://git-scm.com/book/es/v1/)
 - [git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
+- [practical-git.md](https://gist.github.com/juanghurtado/7a819d4f07619e944b56)
 
 
 
