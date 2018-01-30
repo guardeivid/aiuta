@@ -173,12 +173,35 @@ git branch -d branch_tmp
 Si se edita un archivo sin antes hacer merge y/o push, en diferentes ramas o de diferentes repositorios (local,remoto)
 
 
-Otros comandos útiles
-`git remote` `git remote -v`
 
 ### Actualizando repositorio local desde el remoto
 ```
 git pull https://github.com/guardeivid/aiuta.git
+```
+
+### Ver que cambios se han realizado
+```
+git log
+```
+
+Pero se puede hacer más legible y resumido
+```
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+```
+
+Para no tener que escribir toda esa línea se puede crear un alias y luego llamarla con el nombre del alias `git lg`
+```
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git lg
+```
+
+> Para salir del log apretar **`Ctrl`**+**`C`**
+
+
+### Ver la url del repositorio remoto asociada a distintos alias `origin` y otros
+```
+git remote
+git remote -v
 ```
 
 
