@@ -92,7 +92,8 @@ Almacena en un archivo de texto las credenciales
   
 ### Flujo de trabajo
 
-* Click en **Fetch origin** para copiar cambios desde el repositorio remoto al local (*`~ git pull [url]`*)
+* Click en **Fetch origin** para ver si hay diferencias entre el repositorio remoto y el local (*`~ git fetch [url]`*)
+* Click en **Pull origin** para copiar cambios desde el repositorio remoto al local (*`~ git pull [url]`*)
 * Modificar o crear archivos en el proyecto (detecta cambios en local) (*`~ git add *`*)
 * Escribir en **Summary** y click en **Commit** (*`~ git -m mensaje`*)
 * Click en **Push Origin** para enviar las modificaciones al repositorio remoto (*`~ git push origin master`*)
