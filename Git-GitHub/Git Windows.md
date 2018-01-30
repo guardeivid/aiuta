@@ -42,7 +42,7 @@ Descargar Git de la página [https://git-scm.com/downloads](https://git-scm.com/
 
 > https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0
 
-```
+```sh
 git --version
 git config --global user.email "guardeividu@example.com"
 git config --global user.name "Guardeivid"
