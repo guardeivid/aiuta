@@ -42,7 +42,7 @@ Descargar Git de la página [https://git-scm.com/downloads](https://git-scm.com/
 
 > https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/tag/v1.14.0
 
-
+```
 git --version
 git config --global user.email "guardeividu@example.com"
 git config --global user.name "Guardeivid"
@@ -53,6 +53,7 @@ git pull https://github.com/guardeivid/aiuta.git
 git add *
 git commit -m 'Gulp'
 git push --set-upstream https://github.com/guardeivid/aiuta.git master
+```
 
 ### Almacenar usuario y contraseña
 
