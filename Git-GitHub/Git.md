@@ -211,6 +211,11 @@ git remote -v
 git remote show origin
 ```
 
+### Eliminado git de un proyecto
+```
+cd path_proyecto
+rm -rf .git
+```
 
 
 ## Links de interés
