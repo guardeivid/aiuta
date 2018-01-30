@@ -17,3 +17,8 @@ Una vez creado se puede empezar a trabajar con Git de diferentes maneras
 ### Problemas con NetBeans
 
 - Sólo permite hacer un commit del archivo que está activo
+Para eso hacer commit de cada archivo modificado
+*Team* -> ***Commit...***
+
+Y luego 
+*Team* -> *Remote* -> ***Push...***
