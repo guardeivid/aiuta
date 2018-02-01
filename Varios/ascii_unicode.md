@@ -48,3 +48,5 @@
 <https://unicode-table.com/es/>
 
 <http://www.webusable.com/CharsExtendedTable.htm>
+
+<http://www.mclibre.org/consultar/htmlcss/html/html-utf8.html>
