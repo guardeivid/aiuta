@@ -44,3 +44,7 @@
 <http://w3.unpocodetodo.info/utiles/glyphs.php>
 
 <http://www.elcodigoascii.com.ar>
+
+<https://unicode-table.com/es/>
+
+<http://www.webusable.com/CharsExtendedTable.htm>
