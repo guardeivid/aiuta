@@ -217,5 +217,3 @@ Route::get('saludo/{name}/{nickname?}', function ($name, $nickname = null) {
 });
 ```
 
-
-Si uno esc
