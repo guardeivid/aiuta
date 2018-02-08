@@ -203,7 +203,17 @@ Route::get('/usuarios/{id}', function ($id) {
 > El **where** puede pasarse un array de variable, expresion regular 
 > ->where(['id', '\w+'])
 
+Se pueden pasar lista de opciones
+```php
+Route::get('user/{slug}', function ($slug) { 
+    return $slug; 
+})->where(['slug' => 'create|delete|update']);
+```
+
 - Otra opción es colocar las rutas más específicas estén declaradas al principio del archivo
+
+
+
 
 #### Parámetros opcopnales
 Se indica agregando el caracter `?` despúes del nombre del parámetro, y debe indicarse un valor por defecto en la función
@@ -217,3 +227,48 @@ Route::get('saludo/{name}/{nickname?}', function ($name, $nickname = null) {
 });
 ```
 
+
+### Controladores 
+
+Permite agrupar la lógica de peticiones HTTP relacionadas y de esta forma organizar mejor nuestro código y no sobre las rutas.
+
+Para crear un controlador desde consola
+
+```
+php artisan make:controller NombreController
+```
+> En el directorio **app/Http/Controllers** estará el controlador creado **NombreController**
+
+
+```php
+<?php
+ 
+namespace App\Http\Controllers;
+ 
+class NombreController extends Controller {
+     // ...
+
+	public function index()	{
+		return 'Usuarios';
+	}
+}
+```
+
+Y para llamarla desde ruotes/web,php, nombrando la clase seguido de un **@** y el método público o acción que se quiere que haga
+```
+Route::get('/usuarios', 'NombreController@index');
+```
+
+> Los parámetros deben especificarse en el método del Controller 
+
+Si se quiere tener un Controlador con un sólo método, se lo puede llamar **__invoke**, y no se necesita colocar el @ en la ruta
+
+```php
+public function __invoke($name, $nickname = null){
+    // ...
+}
+```
+Y en web.php
+```php	
+Route::get('/saludo/{name}/{nickname}', 'WelcomeUserController');
+```
