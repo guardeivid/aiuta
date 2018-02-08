@@ -53,7 +53,7 @@ Actualiza las dependencias del proyecto
 
 
 ### Instalar programaticamente en Unix
-El instalador contiene una firma que cambia, para eso se ouede usar un scrpt
+El instalador contiene una firma que cambia, para eso se puede usar un scrpt
 ```sh
 #!/bin/sh
 
