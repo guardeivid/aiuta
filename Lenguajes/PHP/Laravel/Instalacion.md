@@ -53,7 +53,7 @@ Actualiza las dependencias del proyecto
 
 
 ### Instalar programaticamente en Unix
-El instalador contiene una firma que cambia, para eso se puede usar un scrpt
+El instalador contiene una firma que cambia, para eso se puede usar un script
 ```sh
 #!/bin/sh
 
@@ -145,15 +145,15 @@ Habilitar **mod_rewrite**
 
 El **patrón de diseño Front Controller** consiste en que un solo componente de la aplicación es el responsable de manejar de todas las peticiones HTTP que ésta recibe. Es decir, hay un solo punto de acceso para todas las peticiones.
 
-A través del archivo **index.php** que se encuentra en el directorio **public**. Con el servidor web Apache, el archivo **.htaccess** se encarga de redirigir todas las peticiones a **index.php**
+A través del archivo **`index.php`** que se encuentra en el directorio **`public`**. Con el servidor web Apache, el archivo **.htaccess** se encarga de redirigir todas las peticiones a **index.php**
 
 
 
-Muestra las vistas que están dentro de **resources/views/**, utilizando la extensión **.blade.php** ej **welcome.blade.php**
+Muestra las vistas que están dentro de **`resources/views/`**, utilizando la extensión **`.blade.php`** ej **welcome.blade.php**
 
 
-### Rutas
-Las URL se especifican en **routes/web.php** para la web o en **web.php** para la api
+## Rutas
+Las URL se especifican en **`routes/web.php`** para la web o en **`web.php`** para la api
 
 Se específican tantas como sean necesarias
 > Clase *Route* que llama al método HTTP, (**get, post, any**)
@@ -182,7 +182,7 @@ Route::get('/usuarios/{id}', function ($id) {
     return "Detalles del usuario: {$id}";
 });
 ```
-Los parametros dinámicos deben estar encerrados entre llaves `{}`
+Los parametros dinámicos deben estar encerrados entre llaves **`{}`**
 
 La URL para llamar puede ser http://127.0.0.1:8000/usuarios/1
 
@@ -210,13 +210,13 @@ Route::get('user/{slug}', function ($slug) {
 })->where(['slug' => 'create|delete|update']);
 ```
 
-- Otra opción es colocar las rutas más específicas estén declaradas al principio del archivo
+- Otra opción es declarar las rutas más específicas al principio del archivo
 
 
 
 
-#### Parámetros opcopnales
-Se indica agregando el caracter `?` despúes del nombre del parámetro, y debe indicarse un valor por defecto en la función
+#### Parámetros opcionales
+Se indica agregando el caracter **`?`** despúes del nombre del parámetro, y debe indicarse un valor por defecto en la función
 ```php
 Route::get('saludo/{name}/{nickname?}', function ($name, $nickname = null) {
     if ($nickname) {
@@ -228,13 +228,13 @@ Route::get('saludo/{name}/{nickname?}', function ($name, $nickname = null) {
 ```
 
 
-### Controladores 
+## Controladores 
 
 Permite agrupar la lógica de peticiones HTTP relacionadas y de esta forma organizar mejor nuestro código y no sobre las rutas.
 
 Para crear un controlador desde consola
 
-```
+```sh
 php artisan make:controller NombreController
 ```
 > En el directorio **app/Http/Controllers** estará el controlador creado **NombreController**
@@ -254,14 +254,14 @@ class NombreController extends Controller {
 }
 ```
 
-Y para llamarla desde ruotes/web,php, nombrando la clase seguido de un **@** y el método público o acción que se quiere que haga
-```
+Y para llamarla desde ruotes/web,php, nombrando la clase seguido de un **`@`** y el método público o acción que se quiere que haga
+```php
 Route::get('/usuarios', 'NombreController@index');
 ```
 
 > Los parámetros deben especificarse en el método del Controller 
 
-Si se quiere tener un Controlador con un sólo método, se lo puede llamar **__invoke**, y no se necesita colocar el @ en la ruta
+Si se quiere tener un Controlador con un sólo método, se lo puede llamar **__invoke**, y no se necesita colocar el **`@`** en la ruta
 
 ```php
 public function __invoke($name, $nickname = null){
