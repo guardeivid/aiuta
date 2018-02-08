@@ -254,7 +254,7 @@ class NombreController extends Controller {
 }
 ```
 
-Y para llamarla desde ruotes/web,php, nombrando la clase seguido de un **`@`** y el método público o acción que se quiere que haga
+Y para llamarla desde ruotes/web.php, nombrando la clase seguido de un **`@`** y el método público o acción que se quiere que haga
 ```php
 Route::get('/usuarios', 'NombreController@index');
 ```
