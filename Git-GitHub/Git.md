@@ -222,9 +222,10 @@ rm -rf .git
 - [Pro Git book en español](https://git-scm.com/book/es/v1/)
 - [git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
 - [practical-git.md](https://gist.github.com/juanghurtado/7a819d4f07619e944b56)
+- [Usando git de manera local](http://adrianmoya.com/2012/07/usando-git-de-manera-local/)
+- [Usando git de manera remota](http://adrianmoya.com/2013/01/usando-git-de-manera-remota/)
 
-
-
+<!--
 ---
 # Autenticarse con GitHub desde Git
 ---
@@ -256,3 +257,4 @@ Descripción
 ---
 
 > **Crear la primer página**
+-->
