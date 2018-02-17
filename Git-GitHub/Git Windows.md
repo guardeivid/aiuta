@@ -110,9 +110,10 @@ Almacena en un archivo de texto las credenciales
    1. **D3DCompiler_47.dll** [W7x86](http://go.microsoft.com/fwlink/?LinkId=848159) o [W7x64](http://go.microsoft.com/fwlink/?LinkId=848158) 
    2. **NET 4.7** [W7x86](http://www.microsoft.com/downloads/details.aspx?familyid=219c1fed-8214-431d-85a5-49e675436501) o [W7x64](http://www.microsoft.com/downloads/details.aspx?familyid=e934e251-8ada-442b-b3ad-34d051f18c37) 
 
-   
-## Sourcetree
-1. Descargar en <https://es.atlassian.com/software/sourcetree>
+<!--
+## GitKraken
+1. Descargar en <https://www.gitkraken.com/download/windows>
 2. Instalación
 	1. Licencia -> Ir a Atlassian
 	2. Registrar Cuenta en <https://id.atlassian.com/signup?application=mac&continue=https://my.atlassian.com>:
+-->
