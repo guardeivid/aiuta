@@ -98,3 +98,14 @@ Almacena en un archivo de texto las credenciales
 * Modificar o crear archivos en el proyecto (detecta cambios en local) (*`~ git add *`*)
 * Escribir en **Summary** y click en **Commit** (*`~ git commit -m mensaje`*)
 * Click en **Push Origin** para enviar las modificaciones al repositorio remoto (*`~ git push [origin] [branch]`*)
+
+## Git Extensions GUI
+
+<https://gitextensions.github.io/>
+
+### Instalación
+
+1. Descargar [Git Extensions](https://github.com/gitextensions/gitextensions/releases/)
+2. Requiere **Windows 7SP1+**, **.NET Framework 4.6.1+** y éste requiere **D3DCompiler_47.dll**
+   1. **D3DCompiler_47.dll** [W7x86](http://go.microsoft.com/fwlink/?LinkId=848159) o [W7x64](http://go.microsoft.com/fwlink/?LinkId=848158) 
+   2. **NET 4.7** [W7x86](http://www.microsoft.com/downloads/details.aspx?familyid=219c1fed-8214-431d-85a5-49e675436501) o [W7x64](http://www.microsoft.com/downloads/details.aspx?familyid=e934e251-8ada-442b-b3ad-34d051f18c37) 
