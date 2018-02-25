@@ -195,7 +195,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 git lg
 ```
 
-> Para salir del log apretar **`Ctrl`**+**`C`**
+> Para salir del log apretar **`Ctrl`**+**`C`** o ○ **`q`** 
 
 
 ### Ver la url del repositorio remoto asociada a distintos alias `origin` y otros
