@@ -155,7 +155,7 @@ git commit
 
 > Se pueden agregar más líneas para colocar una **`descripción`**
 
-> Para guardar si el editor es **`vim`** escribir **`Ctrl+X`** y luego **`:qw`**
+> Para guardar si el editor es **`vim`** escribir **`Escape`** y luego **`:wq`**
 
 > Si el editor es **`nano`** escribir **`Ctrl+X`** y luego **`Y`**
 
