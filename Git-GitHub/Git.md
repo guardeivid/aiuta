@@ -12,6 +12,10 @@ Para Ubuntu, este PPA proporciona la última versión estable de Git upstream
 sudo add-apt-repository ppa:git-core/ppa 
 sudo apt update; sudo apt install git
 ```
+Ver comandos disponibles
+```sh
+git
+```
 
 Version
 ```sh
@@ -74,12 +78,36 @@ git clone https://github.com/guardeivid/aiuta.git
 ### Crear repositorio de cero en local
 Crear un directorio y dentro iniciar el gestor de git
 ```sh
+mkdir proyectos
+cd proyectos
+
 mkdir aiuta
 cd aiuta
+```
+
+Crear repositorio
+```sh
 git init
 ```
 
 > Operaciones Dentro del proyecto **aiuta** `cd aiuta`
+
+### Ver como se encuentra el repositorio, verificar lo que se añadió al índice del repositorio
+```sh
+git status
+	> branch initial
+	> commit initial
+	> nothing in commit
+```
+
+### Áreas dentro del repositorio
+
+1. Directorio de trabajo
+> **`ls`**, si hay archivos modificados, nuevos o eliminados se encuentran en estado no registrado **unstage**
+2. Área de Stage (índice)
+> **`git add .`**, archivos registrados para ser enviados al próximo commit
+3. Commit
+> **`git commit`**
 
 ### Agregar archivos nuevos o modificados al índice del repositorio para versionar en el próximo _**commit**_
 No incluye las excepciones del archivo _**.gitignore**_
@@ -90,20 +118,48 @@ git add file1 file2 file3
 O utilizando un comodín para agregar todos los archivos
 ```sh
 git add *
+
+# Alternativa
+git add .
 ```
 
-### Para saber lo que está pendiente de hacer commit
+## Mostrar los cambios entre diferentes commits, etc
+
+### Ver los cambios que se han realizado en el directorio de trabajo y el último commit
+```sh
+git diff
+```
+
+### Ver los cambios que se han realizado en el stage y el último commit
 ```sh
 git diff --cached
 ```
 
-### También se puede verificar lo que se añadió al índice del repositorio
+### Ver los cambios que se han realizado entre distintos commits **`git diff <hash> <hash>`**
 ```sh
-git status
+git diff f5f0388 b4844be
+
+# De manera relativa
+git diff HEAD~1 HEAD
 ```
+>Alt+126 **`~`**
+
+
+## Guardar los cambios en el repositorio
 
 ### Pasar los cambios a la versión actual del repositorio local con `git commit` (confirma los cambios)
-Con *-m* se puede ingresar un mensaje para llevar control de los cambios realizados
+```sh
+git commit
+```
+> Muestra un editor para cargar en la primera línea el **`título del mensaje`**
+
+> Se pueden agregar más líneas para colocar una **`descripción`**
+
+> Para guardar si el editor es **`vim`** escribir **`Ctrl+X`** y luego **`:qw`**
+
+> Si el editor es **`nano`** escribir **`Ctrl+X`** y luego **`Y`**
+
+Con *-m* se puede ingresar un mensaje para llevar control de los cambios realizados en una sola línea
 ```sh
 git commit -m 'Subo la estructura del proyecto al repositorio de GitHub'
 ```
@@ -113,6 +169,41 @@ Sólo sirve para los archivos modificados, para los nuevos si hay que utilizar `
 ```sh
 git commit -a -m 'Cambios en el proyecto'
 ```
+
+## Ver commits realizados
+
+### Muestra información del hash, autor, fecha, título, descripción, rama.
+```sh
+git log
+```
+
+### Muestra información en una sola línea
+```sh
+git log --oneline
+```
+
+### Muestra información en una sola línea con color y nombres de ramas
+```sh
+git log --oneline --decorate
+```
+
+### Muestra información de los commits con dibujos de las bifurcaciones de las ramas
+```sh
+git log --graph
+```
+
+### Muestra información de todos los commits de todas las ramas
+```sh
+git log --all
+```
+
+### Se pueden combinar
+```sh
+git log --oneline --decorate --graph --all
+```
+
+
+---
 
 ### Subir y unir la nueva versión del repositorio local hacia el repositorio remoto central
 > git push [url] [branch]
@@ -195,7 +286,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 git lg
 ```
 
-> Para salir del log apretar **`Ctrl`**+**`C`** o ○ **`q`** 
+> Para salir del log apretar **`Ctrl`**+**`C`** o **`q`** 
 
 
 ### Ver la url del repositorio remoto asociada a distintos alias `origin` y otros
