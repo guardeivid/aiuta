@@ -347,9 +347,9 @@ server{
 	}
 	
 	location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/run/php/php7.2-fpm.sock;
-    }
+        	include snippets/fastcgi-php.conf;
+        	fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+    	}
 ```
 Salir de vim **esc** y **:wq**
 
