@@ -263,7 +263,7 @@ git reset --hard <hash>
 ```
 
 
-## Deshacer commits de manera no destructiva (REVERT)
+## Deshacer un commits de manera no destructiva (REVERT)
 > Revierte a un estado anterior realizando un nuevo commit.
 > Modifica cada cambio con su contrario para revertirlo, ej si eliminó una línea ahora la agrega como estaba antes
 
@@ -273,6 +273,22 @@ git revert <hash>
 git revert HEAD
 
 # y luego muestra el editor para escribir el mensaje de éste nuevo commit
+```
+
+### Deshacer varios commits de manera no destructiva (REVERT)
+> Ir pasando el hash o HEAD del estado que se quiere revertir, paso a paso<br>
+> Con el commando **`--no-commit`** evita que se termine de realizar el commit, para poder ir revirtiendo commits anteriores<br>
+> Para finalizar y escribir el mensaje es con **`--continue`**
+
+```sh
+git revert --no-commit <hash>
+git revert --no-commit <hash>
+# o
+git revert --no-commit HEAD
+git revert --no-commit HEAD~1
+
+# y luego para finalizar el commit de la reversión
+git revert --continue
 ```
 
 ----------------------------------------------------------------
