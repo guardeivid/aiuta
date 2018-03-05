@@ -170,6 +170,7 @@ Sólo sirve para los archivos modificados, para los nuevos si hay que utilizar `
 git commit -a -m 'Cambios en el proyecto'
 ```
 
+
 ## Ver commits realizados
 
 ### Muestra información del hash, autor, fecha, título, descripción, rama.
@@ -203,7 +204,78 @@ git log --oneline --decorate --graph --all
 ```
 
 
----
+## Deshacer cambios
+
+### Deshacer cambios en el directorio de trabajo (unstage->último commit del archivo)
+> Revierte un cambio guardado en el archivo
+```sh
+git checkout -- <file>
+```
+
+### Deshacer cambio del stage al directorio de trabajo (stage->unstage del archivo)
+> Revierte un **`git add .`** o **`git add <file>`**
+
+```sh
+git reset HEAD <file>
+
+# y luego para deshacer cambios locales
+git checkout -- <file>
+```
+
+## Deshacer commits de manera destructiva (RESET)
+> No es recomendable utilizar **RESET** para deshacer commits en entornos compartidos<br>
+> Sólo para deshacer cambios locales, **`git commit`** sin haber realizado **`git push`**
+
+### Deshacer commit (commit->stage)
+> Revierte un `git commit` o `git -a commit` a `stage` con los archivos que han sido modificados desde el **HEAD~x** o **hash** pasado por parámetro hasta el HEAD actual
+
+```sh
+git reset --soft HEAD~1
+# o
+git reset --soft <hash>
+
+# para deshacer algún archivo al directorio de trabajo
+git reset HEAD <file>
+
+# y luego para deshacer cambios locales
+git checkout -- <file>
+```
+
+### Deshacer commit (commit->stage->unstage ó directorio de trabajo con cambios locales)
+> Revierte un `git commit` o `git -a commit` a `unstage`
+
+```sh
+git reset HEAD
+# o
+git reset <hash>
+
+# y luego para deshacer cambios locales
+git checkout -- <file>
+```
+
+### Deshacer commit (commit actual->stage->unstage->hasta commit pasado por parámetro)
+> Revierte un `git commit` o `git -a commit` a el estado de otro commit pasado por parámetro<br>
+> Éste será el nuevo **HEAD**
+```sh
+git reset --hard HEAD 
+# o
+git reset --hard <hash>
+```
+
+
+## Deshacer commits de manera no destructiva (REVERT)
+> Revierte a un estado anterior realizando un nuevo commit.
+> Modifica cada cambio con su contrario para revertirlo, ej si eliminó una línea ahora la agrega como estaba antes
+
+```sh
+git revert <hash>
+# o
+git revert HEAD
+
+# y luego muestra el editor para escribir el mensaje de éste nuevo commit
+```
+
+----------------------------------------------------------------
 
 ### Subir y unir la nueva versión del repositorio local hacia el repositorio remoto central
 > git push [url] [branch]
