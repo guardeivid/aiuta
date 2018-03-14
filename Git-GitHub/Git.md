@@ -12,6 +12,25 @@ Para Ubuntu, este PPA proporciona la última versión estable de Git upstream
 sudo add-apt-repository ppa:git-core/ppa 
 sudo apt update; sudo apt install git
 ```
+
+> En caso de no poder instalar utilizar
+```sh
+sudo apt-get install --reinstall ca-certificates
+sudo -E add-apt-repository ppa:git-core/ppa
+```
+
+> Sino hacerlo manualmente
+```sh
+touch ~/git.list
+echo "deb http://ppa.launchpad.net/git-core/ppa/ubuntu trusty main " >> ~/git.list
+echo "deb-src http://ppa.launchpad.net/git-core/ppa/ubuntu trusty main" >> ~/git.list
+sudo mv ~/git.list /etc/apt/sources.list.d/
+sudo chmod 0644 /etc/apt/sources.list.d/git.list
+sudo chown root /etc/apt/sources.list.d/git.list
+sudo apt-key adv --keyserver-options http-proxy="http://:@196.1.1.1:3128>" --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E1DF1F24
+sudo apt-get update; sudo apt-get install git
+```
+
 Ver comandos disponibles
 ```sh
 git
@@ -88,6 +107,12 @@ cd aiuta
 Crear repositorio
 ```sh
 git init
+```
+
+Crear repositorio sin espacio de trabajo (porque no se quiere modificar archivos desde aquí)
+> Se utiliza en **deploy**
+```sh
+git init --bare
 ```
 
 > Operaciones Dentro del proyecto **aiuta** `cd aiuta`
