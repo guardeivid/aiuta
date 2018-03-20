@@ -331,6 +331,10 @@ git remote add origin https://github.com/guardeivid/aiuta.git
 git push -u origin master
 ```
 
+#### Eliminar un remoto
+> git remote rm [nombre] 
+
+
 #### Crear nueva rama (branch) y cambiar a esa rama
 ```
 git branch branch_tmp [basado en rama_existente]
