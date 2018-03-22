@@ -18,3 +18,4 @@ touch ~/.bashrc
 #.bashrc
 alias ai='cd;cd C:/Users/<username>/Documents/aiuta;winpty python.exe a.py'
 ```
+
