@@ -21,3 +21,4 @@ nano ~/.bashrc
 #alias ai='cd;cd C:/Users/<username>/Documents/aiuta;winpty python.exe a.py'
 alias css='cd ~/apps/gis/build;python css.py'
 ```
+
