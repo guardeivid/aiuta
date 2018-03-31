@@ -1,4 +1,4 @@
-"""
+
 def evaluacion(nota):
 	valoracion="aprobado"
 	if nota < 5:
@@ -25,10 +25,9 @@ def verificacion(edad):
 		acceso="Puedes pasar"
 	return acceso
 print(verificacion( edad_usuario ))
-"""
+
 #-------------------------------------------------
 # concatenacion de operadores de comparacion
-"""
 edad=-7
 if 0 < edad < 100:
 	print("La edad es correcta")
@@ -52,10 +51,8 @@ if salario_administrativo < salario_jefe < salario_director < salario_presidente
 	print("todo funciona correctamente")
 else:
 	print("algo falla en la empresa")
-"""
 
 #-----------------------------------------------------------------
-"""
 distancia_escuela=10
 num_hermanos=40
 salario_familiar=2000
@@ -64,7 +61,6 @@ if distancia_escuela > 40 and num_hermanos > 2 or salario_familiar <= 20000:
 	print("Tienes derecho a beca")
 else:
 	print("No tienes derecho a beca")
-"""
 
 #-----------------------------------------------------------------
 
