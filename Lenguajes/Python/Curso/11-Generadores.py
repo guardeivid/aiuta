@@ -69,3 +69,15 @@ ciudades_devueltas = devuelve_ciudades3("Madrid", "Barcelona", "Bilbao", "Valenc
 # devuelve 2 subelementos del primer elemento
 print(next(ciudades_devueltas))
 print(next(ciudades_devueltas))
+
+
+#-------------------------------------
+def factorial(n):
+	i = 1
+	while n > 1:
+		i = n*i
+		yield i
+		n -= 1
+
+for e in factorial(5):
+	print e

@@ -1,4 +1,4 @@
-# Estado inicial, constructor
+# Estado inicial, constructor, encapsulamiento
 
 class Coche(object):
 	

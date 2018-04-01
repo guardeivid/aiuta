@@ -8,6 +8,10 @@
 - Instalar
 - Desactivar el límite de PATH
 
+##### Actualizar PIP
+```sh
+python -m pip install --upgrade pip
+```
 
 ##### Entorno de desarrollo
 Sublime Text 3

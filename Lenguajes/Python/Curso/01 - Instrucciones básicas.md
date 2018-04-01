@@ -68,17 +68,34 @@ cadena.strip()  ## quita espacios a ambos lados de la cadena
 cadena.rstrip() ## quita a la derecha
 cadena.lstrip() ## quita a la izquierda
 
-# Encontrar el indice de la primera aparicion de una cadena o caracter, caso contrario devuelve -1
+# Encontrar el indice de la primera aparicion de una cadena o caracter, caso contrario devuelve -1, se puede especificar el inicio y fin de busqueda.
+cadena.("subcadena" [, pinicio] [, pfin])
 s3.find("a") ## 3
 
-# Reemplazar una subcadena en una cadena
+# Buscar la primera ocurrencia de atrás hacia adelante
+s3.rfind("a") ## 3
+
+
+# Reemplazar una subcadena en una cadena, se puede limitar el numero de veces que se van a realizar los reemplazos
+cadena.replace(valor, nuevo [, limite])
 s3.replace("mundo", "universo") ## hola universo
 
-# Separar una cadena de palabras en una lista, por un caracter, por defecto " "
+# Separar una cadena de palabras en una lista, por un caracter delimitador, por defecto " ", tambien se puede limitar
+cadena.replace(delimitador [, limite])
 s3.split() ## ["hola", "mundo"]
+
+# Unir una secuencia -lista,tupla- por un delimitador a una cadena
+tupla = ("H", "o", "l", "a")
+delimitador = ";"
+delimitador.join(tupla)
+
 
 # Longitud de una cadena
 len(s3) ## 10
+
+# Contar cuantas veces aparece una subcadena en una cadena, se puede dar la posicion de inicio y fin de busqueda en la cadena, es sensitivo.
+cadena.("subcadena"[, pinicio] [, pfin])
+s3.count("o") # 2
 
 ```
 
@@ -141,6 +158,55 @@ def nombre_funcion(url, data=None):
 nombre_funcion(parametros)
 ```
 
+#### Funciones de orden superior 
+- **map(funcion, secuencia [, secuencia] )**, para procesar varias secuencias a la vez.
+```py
+def operador(n, m):
+	if n == None:
+		n = 0
+	if m == None:
+		m = 0
+	return n + m
+
+l1 = [1,2,3,4]
+t1 = (9,8,7)
+
+lr = map(operador, l1, t1)
+print lr # [10, 10, 10, 4]
+```
+
+- **filter(funcion, secuencia)**, itera y evalua segun la condición de la función, retornando un nuevo valor del tipo de secuencia que se envía.
+```py
+def filtro(elem):
+	return elem > 0
+
+l = [1, -3, 2, -7, -8, -9, 10]
+lr = filter(filtro, l)
+print lr # [1, 2, 10]
+```
+
+- **reduce(funcion, secuencia)**, reduce una secuencia a un sólo elemento, recorriendo de a pares de elementos, juntando con el anterior, devuelve el tip de dato que tiene los elementos de la secuencia.
+```py
+s = ("H", "o", "l", "a", " ", "M", "u", "n", "d", "o")
+n = [1, 2, 3]
+def concatenar(a, b):
+	return a + b
+
+r = reduce(concatenar, s)
+print r # "Hola Mundo"  -type str
+r = reduce(concatenar, n)
+print r # 6 -type int
+```
+
+- Funciones **lambda**, funciones anónimas, se ejecutan únicamente cuando se crean con el operador lambda, se escriben en una sola línea. Se pueden utilizar dentro de map, filter, reduce.
+```py
+ss = lambda n,m:n+m
+
+print map(ss, sec1, sec2)
+print map(lambda n: n=="o" , sec1)
+
+```
+
 ### Listas
 
 - Similar a arrays
@@ -171,12 +237,22 @@ Agregar elemento al final de una lista
 nombreLista.append(elem)
 ```
 
-Eliminar elemento de una lista
+Eliminar elemento de una lista, por un índice
 ```py
 del nombreLista[2]
 ```
 
-Ordenar una lista
+Eliminar elemento de una lista, buscando un elemento, elimina la primera ocurrencia
+```py
+nombreLista.remove( elem)
+```
+
+Extraer y eliminar un elemento de una lista por medio de un índice, si no se especifica, se quita el último elemento
+```py
+nombreLista.pop(2)
+```
+
+Ordenar una lista, y cambia el índice de los elementos
 ```py
 nombreLista.sort()   ## ascendente
 nombreLista.reverse() ## descendente
@@ -187,26 +263,54 @@ Agregar elemento en un indice determinado
 nombreLista.insert(indice, elem)
 ```
 
-Extender y concatenar listas
+Extender y concatenar listas, puede ser con cualquier tipo iterable como una nueva lista, tupla, cadena
 ```py
 nombreLista.extend( nombreLista2  )
 nombreLista + nombreLista2
 ```
 
-Obtener el inidice de un valor, siempre devuelve el primero que encuentra
+Obtener el inidice de un valor, siempre devuelve el primero que encuentra, en caso contrario devuelve error
 ```py
 nombreLista.index( elem )
+
+lista = [1, "Dos", 3]
+buscar = = 1
+print lista.index(buscar)
 ```
 
 Determinar si un elemento se encuentra en una lista
 ```py
 elem in nombreLista
+
+lista = [1, "Dos", 3]
+buscar = = 1
+print buscar in lista
+```
+
+Obtener la cantidad de veces que está un elemento en una lista
+```py
+nombreLista.count( elem )
 ```
 
 Modificar contenido de las listas, sin necesidad de hacer una copia, por indice o secuencia
 ```py
 nombreLista[1] = "nuevoValor"
 nombreLista[0:2] = ["nuevoValorEnIndice0", "nuevoValorEnIndice1"] ## indice 2 no lo incluye
+```
+
+#### Compresión de listas
+- Reemplaza las funciones reduce, map, filter
+Devuelve lo que se indica primero antes del for
+```py
+l1 = [1, 2, 3, -1, 4]
+l2 = [res for num in l1 if num > 0]
+print l2
+
+s = ["H", "O", "L", "A"]
+l2 = [c * num for c in s
+			  	for num in l1
+					if num > 0]
+# ['H', 'HH', 'HHH', 'HHHH', 'O', 'OO', 'OOO', 'OOOO', 'L', 'LL', 'LLL', 'LLLL', 'A', 'AA', 'AAA', 'AAAA']
 ```
 
 ### Tuplas
@@ -236,22 +340,48 @@ tupla1 + tupla2
 
 ```py
 nombreDiccionario = { clave: valor, ...}
+diccionario = {
+	"redes_sociales": ["Twitter", "Facebook", "Linkedin"],
+	3: "Tres",
+	"Hola": "Mundo"
+}
 
-# acceder por medio de la clave
+# Obtener un valor por medio de la clave
 nombreDiccionario[clave]
+nombreDiccionario.get(clave)
+
+# Asignar un nuevo valor a una clave ya sea existente o no
+nombreDiccionario[clave] = nuevoValor
+nombreDiccionario.set(clave, nuevoValor)
 
 # Determinar si existe una clave
 nombreDiccionario.has_key(clave)
+diccionario.has_key("Hola") # True
 
-# Obtener una lista de claves
+# Obtener una lista de claves del diccionario
 nombreDiccionario.keys()
 
-# Obtener una lista de valores
+# Obtener una lista de valores del diccionario
 nombreDiccionario.values()
 
 # Con la lista de claves se puede iterar todos los elementos de un diccionario
 listKeys = nombreDiccionario.keys()
 for x in listKeys: print x
+
+# Obtener una lista de tuplas con cada par clave:valor separados por coma
+nombreDiccionario.items()
+
+# Extraer devolviendo el valor, y eliminar un par clave:valor del diccionario, especificando una clave, y opcionalmente se puede pasar un segundo argumento para que devuelva en caso de que no se encuentre la clave y no lance una exception
+DICCIONARIO.pop(clave [, valor_defecto])
+
+# Eliminar un elemento del diccionario, por clave
+del nombreDiccionario[clave]
+
+# Vaciar un diccionario, pero sigue existiendo
+nombreDiccionario.clear()
+
+# Crear una copia o clon de un diccionario
+nombreDiccionario2 = nombreDiccionario.copy()
 ```
 
 
@@ -352,6 +482,33 @@ def funcion():
 
 - **yield from**, simplifica el codigo de los generadores cuando se usan bucles anidados, y permite a acceder al subelemento, similar a un array de 2 dimensiones
 
+```py
+l1 = [1, 2, 3, -1, 4]
+s = ["H", "O", "L", "A"]
+l2 = (c * num for c in s
+			  	for num in l1
+					if num > 0)
+print l2.next()  # H
+
+```
+
+#### Decoradores
+- Es una función que recibe una función y devuelve una nueva función decorada
+```py
+def decorador(fx):
+	#*args = recibe una n lista de argumentos
+	#**kwargs = recibe un diccionario de argumentos con claves
+	def funcionDecorada(*args, **kwargs):
+		print "funcion ejecutada", fx.__name__
+		fx(*args, **kwargs)
+	return funcionDecorada
+
+@decorador
+def resta(n, m):
+	print n - m
+
+resta(3, 5)
+```
 
 #### Excepciones
 - Es un error en tiempo de ejecucion, de algo inesperado.
@@ -579,3 +736,13 @@ print open("archivo.csv", "rt").read()
 - Se utiliza la biblioteca **Pickle**
   - **dump()** vuelca datos al fichero binario externo
   - **load()** carga los datos del fichero binario externo
+
+
+#### Convertir a executable
+```py
+pip install pyinstaller
+
+pyinstaller --onefile "C:\\Users\\VBox_da\\Documents\\aiuta\\Lenguajes\\Python\\Curso\\99-Juego Papel-Piedra-Tijera.py"
+
+# En el directorio dist se encuentra el archivo exe ~/dist/*.exe
+```

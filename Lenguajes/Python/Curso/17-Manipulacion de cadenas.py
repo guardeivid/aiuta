@@ -37,3 +37,8 @@ else:
 # replace() reemplaza una cadena por otra
 
 # rfind() encuentra el indice contando desde atras
+
+# join() une una secuencia -lista, tupla- por un delimitador
+tupla = ("H", "o", "l", "a")
+delimitador = ";"
+print delimitador.join(tupla)
