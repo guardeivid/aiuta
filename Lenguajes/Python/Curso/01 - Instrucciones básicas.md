@@ -68,7 +68,8 @@ cadena.strip()  ## quita espacios a ambos lados de la cadena
 cadena.rstrip() ## quita a la derecha
 cadena.lstrip() ## quita a la izquierda
 
-# Encontrar el indice de la primera aparicion de una cadena o caracter, caso contrario devuelve -1, se puede especificar el inicio y fin de busqueda.
+# Encontrar el indice de la primera aparicion de una cadena o caracter, caso contrario devuelve -1
+# se puede especificar el inicio y fin de busqueda.
 cadena.("subcadena" [, pinicio] [, pfin])
 s3.find("a") ## 3
 
@@ -93,7 +94,8 @@ delimitador.join(tupla)
 # Longitud de una cadena
 len(s3) ## 10
 
-# Contar cuantas veces aparece una subcadena en una cadena, se puede dar la posicion de inicio y fin de busqueda en la cadena, es sensitivo.
+# Contar cuantas veces aparece una subcadena en una cadena
+# se puede dar la posicion de inicio y fin de busqueda en la cadena, es sensitivo.
 cadena.("subcadena"[, pinicio] [, pfin])
 s3.count("o") # 2
 
@@ -371,7 +373,8 @@ for x in listKeys: print x
 # Obtener una lista de tuplas con cada par clave:valor separados por coma
 nombreDiccionario.items()
 
-# Extraer devolviendo el valor, y eliminar un par clave:valor del diccionario, especificando una clave, y opcionalmente se puede pasar un segundo argumento para que devuelva en caso de que no se encuentre la clave y no lance una exception
+# Extraer devolviendo el valor, y eliminar un par clave:valor del diccionario, especificando una clave
+# opcionalmente se puede pasar un segundo argumento para que devuelva en caso de que no se encuentre la clave y no lance una exception
 DICCIONARIO.pop(clave [, valor_defecto])
 
 # Eliminar un elemento del diccionario, por clave
@@ -698,7 +701,7 @@ for x in lista:
 ```
 
 - Con el módulo **csv**
-Permite leer correctamente, y que los archivos pueden variar según la aplicación que los crea. También permite escribir
+Permite leer correctamente, ya que los archivos pueden variar según la aplicación que los crea. También permite escribir
 ```py
 # Leer, con objeto reader(file)
 import csv
