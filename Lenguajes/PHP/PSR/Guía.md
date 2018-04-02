@@ -2,6 +2,9 @@
 > Instala dependencias de PHP y actualizaciones de seguridad en un proyecto
 <https://getcomposer.org/download/>
 
+> Repositorio de paquetes PHP
+<https://packagist.org/>
+
 #### Instalación de Composer
 - Instalar la versión rápidamente
 ```sh
