@@ -12,10 +12,10 @@ ssh-keygen -t rsa -b 4096 -C "gitlab"
 Crear archivo si no existe **~/.ssh/config** y escribir
 ```config
 Host glab 
-	HostName 					gitlab.com
-	User 						git
-	PreferredAuthentications 	publickey
-	IdentityFile 				~/.ssh/id_rsa_gitlab
+	HostName                    gitlab.com
+	User                        git
+	PreferredAuthentications    publickey
+	IdentityFile                ~/.ssh/id_rsa_gitlab
 ```
 
 Configurar en GitLab
