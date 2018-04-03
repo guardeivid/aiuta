@@ -118,7 +118,7 @@ Preferences -> Key Bindings - User
 { "keys": ["ctrl+t"], "command": "run_macro_file", "args": {"file": "Packages/User/convert_tabs_to_spaces.sublime-macro"} },
 { "keys": ["ctrl+shift+f"], "command": "reindent" , "args": {"single_line": false}}
 
-
+<https://manuais.iessanclemente.net/index.php/Tutorial_sobre_editor_Sublime_Text_3>
 #### Plugins recomendados <https://packagecontrol.io/>
 - **AutoFilename(https://packagecontrol.io/packages/AutoFileName)**, vincula archivos mediante sugerencias, para href, src, include , etc.
 - **MatlabFilenameAutoComplete(https://packagecontrol.io/packages/MatlabFilenameAutoComplete)** en ST3
