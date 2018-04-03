@@ -8,6 +8,10 @@
 - Instalar
 - Desactivar el límite de PATH
 
+##### Actualizar PIP
+```sh
+python -m pip install --upgrade pip
+```
 
 ##### Entorno de desarrollo
 Sublime Text 3
@@ -31,7 +35,7 @@ Sublime Text 3
     - Preferences > Key Bindings - User
     - Agregar al archivo entre llaves y guardar ,
     ```config
-    	{ "keys": ["ctrl+shift+p"], "command": "run_existing_window_command", "args": {
+    	{ "keys": ["ctrl+alt+b"], "command": "run_existing_window_command", "args": {
     		"id": "repl_python_run",
     		"file": "config/Python/Main.sublime-menu"
     	}}

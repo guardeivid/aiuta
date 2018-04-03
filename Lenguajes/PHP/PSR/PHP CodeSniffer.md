@@ -1,0 +1,1 @@
+<http://www.conasa.es/blog/php-codesniffer-sublime-text/>
