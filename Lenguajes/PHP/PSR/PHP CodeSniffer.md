@@ -1,6 +1,26 @@
 ### SublimeLinter
 <http://www.sublimelinter.com/en/latest/settings.html>
 
+#### SublimeLinter-php
+<https://github.com/SublimeLinter/SublimeLinter-php>
+
+```sh
+# Ver el PATH de php
+where php
+# linux **which php**
+
+# C:\ms4w\tools\php\php.exe
+```
+
+- Sublime Text 3 -> Preferences -> Package Settings -> SublimeLinter -> Settings
+```json
+    "linters":{
+		"php": {
+                "cmd": "C:\\ms4w\\tools\\php\\php.exe"
+        }
+	}
+```
+
 #### SublimeLinter-phpcs
 <https://github.com/SublimeLinter/SublimeLinter-phpcs>
 <https://github.com/squizlabs/PHP_CodeSniffer#installation>

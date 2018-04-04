@@ -65,6 +65,14 @@ exit $RESULT
 #### En Windows
 Descargar y correr [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)
 
+> Problema al instalar en MS4W
+
+- Copiar el archivo **php.ini** a la carpeta **ms4w/tools/php**
+```sh
+cp \ms4w\Apache\cgi-bin\php.ini \ms4w\tools\php
+```
+
+
 ### Iniciar proyecto composer
 - Crear un archivo **`composer.json`**, en Node.js está package.json.
 Comandos que puedes utilizar con composer:
