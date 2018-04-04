@@ -1,3 +1,61 @@
+### SublimeLinter
+<http://www.sublimelinter.com/en/latest/settings.html>
+
+#### SublimeLinter-phpcs
+<https://github.com/SublimeLinter/SublimeLinter-phpcs>
+<https://github.com/squizlabs/PHP_CodeSniffer#installation>
+
+```sh
+composer global require "squizlabs/php_codesniffer=*"
+
+# Ver el PATH que se debe incluir
+composer global config bin-dir --absolute
+# C:\Users\VBox_da\AppData\Roaming\Composer/vendor/bin
+```
+
+Agregar variable de entorno
+- Ir a Equipo (Botón derecho) -> Propiedades -> Configuración avanzada del sistema -> (Opciones avanzadas) Variables de entorno
+- (Variables del sistema) Editar PATH -> Agregar ruta separado con **;**
+
+Comprobar que funciona
+```sh
+phpcs -h
+phpcbf -h
+```
+
+Instalar **SublimeLinter**
+> CMD-Shift-P -> Install Package -> SublimeLinter
+
+Instalar **SublimeLinter-phpcs**
+> CMD-Shift-P -> Install Package -> SublimeLinter-phpcs
+
+#### SublimeLinter-phpmd
+<https://github.com/SublimeLinter/SublimeLinter-phpmd>
+<https://phpmd.org/documentation/index.html>
+```sh
+composer global require phpmd/phpmd
+```
+
+Instalar **SublimeLinter-phpmd**
+> CMD-Shift-P -> Install Package -> SublimeLinter-phpmd
+
+#### SublimeLinter-php-cs-fixer
+<https://github.com/jhoff/SublimeLinter-contrib-php-cs-fixer>
+<https://github.com/FriendsOfPHP/PHP-CS-Fixer>
+```sh
+composer global require "friendsofphp/php-cs-fixer:>=2.7"
+```
+
+Instalar **SublimeLinter-php-cs-fixer**
+> CMD-Shift-P -> Install Package -> SublimeLinter-php-cs-fixer
+
+Actualizar
+```sh
+composer global update friendsofphp/php-cs-fixer
+```
+
+---
+
 <http://www.conasa.es/blog/php-codesniffer-sublime-text/>
 
 #### Descargar 

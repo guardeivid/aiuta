@@ -25,6 +25,8 @@ Configurar en GitLab
 Chequear conexión
 ```sh
 ssh -T git@gitlab.com 
+# 0
+ssh -T glab
 ```
 
 #### Agregar Remoto individual a GIT
