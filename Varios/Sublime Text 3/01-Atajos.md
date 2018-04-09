@@ -112,14 +112,33 @@ Tools -> Record Macro, **_Ctrl + Q_**
 
 
 #### Atajos de teclado personalizados
-Preferences -> Key Bindings - User
+**Preferences -> Key Bindings - User**
 
 - Identacion
+```json
 { "keys": ["ctrl+t"], "command": "run_macro_file", "args": {"file": "Packages/User/convert_tabs_to_spaces.sublime-macro"} },
 { "keys": ["ctrl+shift+f"], "command": "reindent" , "args": {"single_line": false}}
+```
+
+- Atajo A SublimeREPL-> Phyton-> Phyton - RUN current file
+```json
+{ "keys": ["ctrl+alt+b"], "command": "run_existing_window_command", "args":{"id": "repl_python_run","file": "config/Python/Main.sublime-menu"}}
+```
+
+#### Configuración general
+
+- Encoding
+> **Preferences > Settings - Users**
+```json
+	"show_encoding" : true,
+```
+
+
 
 <https://manuais.iessanclemente.net/index.php/Tutorial_sobre_editor_Sublime_Text_3>
 #### Plugins recomendados <https://packagecontrol.io/>
+- **MapfileSyntax** <https://packagecontrol.io/packages/MapfileSyntax>
+Run Package Control: Install Package in the Command Palette (Super+Shift+P) -> Install MapfileSyntax
 - **AutoFilename(https://packagecontrol.io/packages/AutoFileName)**, vincula archivos mediante sugerencias, para href, src, include , etc.
 - **MatlabFilenameAutoComplete(https://packagecontrol.io/packages/MatlabFilenameAutoComplete)** en ST3
 - **DocBlockr(https://packagecontrol.io/packages/DocBlockr)** 
@@ -142,6 +161,10 @@ You can Also remove, comment or remove commented log statements from your selsec
 - **Sublime Linter 3** Es un complemento que admite programas “lint” (conocidos como “linters”). SublimeLinter resalta las líneas de código que el linter considera que contienen errores (potenciales). También admite resaltar anotaciones especiales (por ejemplo: TODO) para que puedan ubicarse rápidamente. Admite casi todos los idiomas populares.
 - **SublimeREPL** 
 Ejecute un intérprete dentro de ST3 (Clojure, CoffeeScript, F #, Groovy, Haskell, Lua, MozRepl, NodeJS, Python, R, Ruby, Scala, shell o configure uno usted mismo).
+```json
+
+```
+
 - **JSLint** 
 JSLint es una herramienta de calidad de código Javascript creada por Douglas Crockford, desarrollador de JavaScript hardcore. Esta herramienta lo ayuda a saber qué partes de su código necesita cambiar para tener un mejor código. Hasta ahora, solo podías hacerlo en línea, pero con este complemento puedes hacerlo directamente en ST2. Si es serio acerca de Javascript necesita esto.
 - **SideBarEnhancements(https://packagecontrol.io/packages/SideBarEnhancements)** Amplía las opciones de gestión de archivos de la barra lateral.
