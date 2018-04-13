@@ -15,7 +15,7 @@ Mostrar Consola **_Ctrl +\`_**
 
 Layouts **Alt + Shift + [1|2|3|4]w_**
 
-- Selecciona la linea de arriba **_Ctrl + Alt + Up_** 
+- Selecciona la linea de arriba **_Ctrl + Alt + Up_**
 - Selecciona la linea de abajo **_Ctrl + Alt + Down_**
 - Selecciona todo **_Ctrl + A_**
 - Seleccionar palabra(s) que coinciden con una seleccion previa **_Ctrl + D_**
@@ -28,7 +28,7 @@ Layouts **Alt + Shift + [1|2|3|4]w_**
 ej Copiar, luego seleccionar multiples cursores y pegar
 
 - Múlpiples cursores **_Ctrl + click_**
-- Línea dentada (en 1 linea) **_Ctrl + J_** 
+- Línea dentada (en 1 linea) **_Ctrl + J_**
 - Duplica la línea **_Ctrl + Shift + D_**
 - Cerrar una etiqueta **_Alt +_**
 - Muestra todas las abreviaturas y listas de etiqueta por orden alfabético **_Ctrl + espacio_**
@@ -125,6 +125,12 @@ Tools -> Record Macro, **_Ctrl + Q_**
 { "keys": ["ctrl+alt+b"], "command": "run_existing_window_command", "args":{"id": "repl_python_run","file": "config/Python/Main.sublime-menu"}}
 ```
 
+- Quitar espacios en blanco al final de una línea
+```json
+"trim_trailing_white_space_on_save": true,
+"ensure_newline_at_eof_on_save": true
+```
+
 #### Configuración general
 
 - Encoding
@@ -141,31 +147,31 @@ Tools -> Record Macro, **_Ctrl + Q_**
 Run Package Control: Install Package in the Command Palette (Super+Shift+P) -> Install MapfileSyntax
 - **AutoFilename(https://packagecontrol.io/packages/AutoFileName)**, vincula archivos mediante sugerencias, para href, src, include , etc.
 - **MatlabFilenameAutoComplete(https://packagecontrol.io/packages/MatlabFilenameAutoComplete)** en ST3
-- **DocBlockr(https://packagecontrol.io/packages/DocBlockr)** 
+- **DocBlockr(https://packagecontrol.io/packages/DocBlockr)**
 Permite insertar comentario para la documentación, para usar escriba las primeras lineas  /** presione la tecla tab.
-- **PHPManualer** 
+- **PHPManualer**
 Este plugin permite mostrar al pulsar las teclas ctrl + alt + d – ctrl + alt + s la documentación de las funciones nativas de PHP
-- **ColorPicker** 
+- **ColorPicker**
 Permite seleccionar en la paleta de color un color especifico, muy bueno al escribir código CSS. Para usar presione **ctrl+alt+c**.
-- **jQuery** 
+- **jQuery**
 Plugin para ayudar la sugerencia de JQuery, al escribir código puede mostrar casi la totalidad de los métodos que existen en JQuery en forma de fragmentos.
 - **Terminal(https://packagecontrol.io/packages/Terminal)** permite abrir una ventana de terminal en la misma carpeta en donde se encuentra el fichero con el que estás trabajando.
 con **ctrl+shift+t**, y a la carpeta del proyecto con **ctrl+alt+shift+t**.
-- **Apacheconf.tmLanguage(https://packagecontrol.io/packages/ApacheConf.tmLanguage)** 
+- **Apacheconf.tmLanguage(https://packagecontrol.io/packages/ApacheConf.tmLanguage)**
 Resaltado de sintaxis para los archivos de configuración de Apache. (.htaccess)
 - **Color Highlighter(https://packagecontrol.io/packages/Color%20Highlighter)** colorea las variables de color. Es compatible con diferentes tipos de valores de color como hexadecimal, rgb, RGBA, HSL, HSLA.
-- **Console Wrap(https://packagecontrol.io/packages/Console%20Wrap)** Añade tus variables a la segunda línea en los logs de la consola, soporta Javascript, Python, Php. 
+- **Console Wrap(https://packagecontrol.io/packages/Console%20Wrap)** Añade tus variables a la segunda línea en los logs de la consola, soporta Javascript, Python, Php.
 Seleccionar una variable (o poner el cursor en ella) y presionar **ctrl+shift+q**. The log line will appear on the next line. Press "ctrl+shift+q" again to change wrapping (info,warn etc.)
 
 You can Also remove, comment or remove commented log statements from your selsection or from all document you can find that functionality in context menu (right click) or Command Palette (command+shift+p on OS X, control+shift+p on Linux/Windows).
 - **Sublime Linter 3** Es un complemento que admite programas “lint” (conocidos como “linters”). SublimeLinter resalta las líneas de código que el linter considera que contienen errores (potenciales). También admite resaltar anotaciones especiales (por ejemplo: TODO) para que puedan ubicarse rápidamente. Admite casi todos los idiomas populares.
-- **SublimeREPL** 
+- **SublimeREPL**
 Ejecute un intérprete dentro de ST3 (Clojure, CoffeeScript, F #, Groovy, Haskell, Lua, MozRepl, NodeJS, Python, R, Ruby, Scala, shell o configure uno usted mismo).
 ```json
 
 ```
 
-- **JSLint** 
+- **JSLint**
 JSLint es una herramienta de calidad de código Javascript creada por Douglas Crockford, desarrollador de JavaScript hardcore. Esta herramienta lo ayuda a saber qué partes de su código necesita cambiar para tener un mejor código. Hasta ahora, solo podías hacerlo en línea, pero con este complemento puedes hacerlo directamente en ST2. Si es serio acerca de Javascript necesita esto.
 - **SideBarEnhancements(https://packagecontrol.io/packages/SideBarEnhancements)** Amplía las opciones de gestión de archivos de la barra lateral.
 - **SublimeCodeIntel**
