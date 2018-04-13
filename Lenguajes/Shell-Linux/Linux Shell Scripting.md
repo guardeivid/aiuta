@@ -7,9 +7,11 @@ locate bash | less
 # /bin/bash
 ```
 
-#### Crear directorios
+Crear archivo bash
 ```sh
 mkdir scripts
+# se pueden crear varias carpetas en el directorio actual separadas por un espacio
+
 cd scripts
 nano primer.sh
 ```
@@ -29,106 +31,8 @@ source primer.sh
 ```
 
 #### Dar permisos de ejecucion al archivo
-Ver archivos y carpetas en un directorio con detalle
 ```sh
-ls -l
-```
- x=ejecucion
- r=lectura
- w=escritura
-
- -rwx-xr-x  nombreusuario nombregrupo
-
- Primeros 3 son los permisos del usuario
- Segundos 3 son los permisos del grupo
- Terceros 3 son los permisos de otros usuarios
-
- Cambio de permisos para ejecutar archivos
-##### Modo octal
-r=4, w=2, x=1
-
-```sh
-# para cambiar permisos debe ser el superusuario
-sudo su
-
-# Permiso de lectura para todos los usuarios
-chmod 444 nombrearchivo
-
-# Permiso lectura-escritura para usuario actual y a otros lectura
-chmod 644 nombrearchivo
-
-# Permiso total a todos
-chmod 777 nombrearchivo
-
-# ejecucion a todos unicamente
-chmod 111 nombrearchivo
-
-```
-
-##### Con letras
-u=usuario, g=grupo, o=otros, a=todos
-
-```sh
-# para cambiar permisos debe ser el superusuario
-sudo su
-
-# lectura a usuario actual
-chmod u=r nombrearchivo
-
-#todos total
-chmod a=rwx nombrearchivo
-
-# quitar lectura a todos con -
-chmod a-r nombrearchivo
-
-# agregar un permiso y dejar lo que ya tiene actualmente
-chmod a+r nombrearchivo
-```
-
-
-##### setuid
-Agregar permisos de superusuario a un usuario
-```sh
-# para cambiar permisos debe ser el superusuario
-sudo su
-
-# agregar permisos de superusuario a un archivo
-chmod u+s /sbin/fdisk
-
-# quitar permisos
-chmod u-s /sbin/fdisk
-
-chmod 4700 nombrearchivo
-```
-
-##### setgid
-Agregar permisos de superusuario a un grupo
-```sh
-# para cambiar permisos debe ser el superusuario
-sudo su
-
-# agregar permisos de superusuario a un archivo
-chmod g+s /sbin/fdisk
-
-# quitar permisos
-chmod g-s /sbin/fdisk
-
-chmod 2700 nombrearchivo
-```
-
-##### sticky
-Deniega que otros usuarios puedan borrar lo que ha modificado un usuario por mas que tengan permisos de escritura
-```sh
-# para cambiar permisos debe ser el superusuario
-sudo su
-
-# agregar permisos de superusuario a un archivo
-chmod o+t /sbin/fdisk
-
-# quitar permisos
-chmod o-t /sbin/fdisk
-
-chmod 1777 nombrearchivo
+sudo chmod a+x archivo
 ```
 
 #### Uso de comillas
