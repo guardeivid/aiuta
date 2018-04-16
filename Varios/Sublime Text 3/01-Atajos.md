@@ -125,12 +125,6 @@ Tools -> Record Macro, **_Ctrl + Q_**
 { "keys": ["ctrl+alt+b"], "command": "run_existing_window_command", "args":{"id": "repl_python_run","file": "config/Python/Main.sublime-menu"}}
 ```
 
-- Quitar espacios en blanco al final de una línea
-```json
-"trim_trailing_white_space_on_save": true,
-"ensure_newline_at_eof_on_save": true
-```
-
 #### Configuración general
 
 - Encoding
@@ -139,6 +133,11 @@ Tools -> Record Macro, **_Ctrl + Q_**
 	"show_encoding" : true,
 ```
 
+- Quitar espacios en blanco al final de una línea
+```json
+"trim_trailing_white_space_on_save": true,
+"ensure_newline_at_eof_on_save": true
+```
 
 
 <https://manuais.iessanclemente.net/index.php/Tutorial_sobre_editor_Sublime_Text_3>
