@@ -1,4 +1,4 @@
-### Composer 
+### Composer
 > Instala dependencias de PHP y actualizaciones de seguridad en un proyecto
 <https://getcomposer.org/download/>
 
@@ -7,8 +7,9 @@
 
 #### Instalación de Composer
 - Instalar la versión rápidamente
-```sh
+
 # Linux
+```sh
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
@@ -68,6 +69,7 @@ Descargar y correr [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.e
 > Problema al instalar en MS4W
 
 - Copiar el archivo **php.ini** a la carpeta **ms4w/tools/php**
+
 ```sh
 cp \ms4w\Apache\cgi-bin\php.ini \ms4w\tools\php
 ```
@@ -108,6 +110,7 @@ composer validate
 composer init
 ```
 Al ejecutar este comando solicitará cierta información que servirá para crear el archivo composer.json, la información requerida es básica para el archivo, como el nombre del paquete, descripción, autor(es), página del proyecto, y las dependencias.
+
 ```json
 {
    "name": "guardeivid/tutorial-composer",
@@ -121,7 +124,6 @@ En este archivo estamos indicando que nuestro proyecto se llama "guardeivid/tuto
 
 Luego con el campo require estamos indicando que vamos a usar dos librerías, por un lado el phpmailer de phpmailer y el kint de ravener con una versión requerida. Por ejemplo en phpmailer declaramos como versión "5.2.*". Eso quiere decir que te instale siempre la versión 5.2.x (la más reciente de la 5.2). Pero podrías haber declarado "5.*". Existen varios operadores para especificar la versión.
 
-
 ```sh
 composer install
 ```
@@ -131,67 +133,80 @@ Este comando procesa el archivo composer.json y resuelve las dependencias, norma
 composer update
 ```
 Actualiza las dependencias de tu proyecto a la última versión y también actualiza el archivo composer.lock Esto se puede hacer de varias maneras, imagina que solo quieres actualizar un dependencia en específico, para hacer eso tienes que indicar el nombre del paquete, de la siguiente manera:
+
 ```sh
 composer update vendor/package another-vendor/another-package vendor-x/package-x
+```
+Esto solo actualizará las dependencias especificadas, si quieres actualizar todas las dependencias de un cierto paquete puede ahorrar muchos carateres utilizando un comodín *, de la siguiente manera
 
-Esto solo actualizará las dependencias especificadas, si quieres actualizar todas las dependencias de un cierto paquete puede ahorrar muchos carateres utilizando un comodín *, de la siguiente manera:
 ```sh
 composer update vendor-x/*
+```
 
 El comando require instala las dependencias especificadas, este lo explicaré más detalladamente en el siguiente tutorial, la sintaxis es la siguiente:
 ```sh
 composer require vendor/package:*
+```
 
 El comando search busca el paquete indicado en Packagist, solo tienes que pasarle el nombre del paquete.
 ```sh
 php composer search monolog
+```
 
 El comando show muestra los paquetes disponibles y también puedes ver los detalles de un paquete en específico. Basta con pasarle un argumento, este tiene que ser el nombre del paquete:
 ```sh
 php composer show vendor/package
-
+```
 Desplegará información como: el nombre del paquete, versiones, el tipo de paquete, el código fuente, el zip del código fuente, licencia, etc.
+
 
 El comando depends muestra la lista de paquetes de los cuales depende el paquete indicado. Sí, me estoy refiriendo a las librerías de terceros. Muestra los paquetes de tipo require y require-dev
 ```sh
 php composer depends vendor/package
+```
 
 Para asegurarnos que nuestro archivo composer.json está escrito correctamente y que alguno no tendrá errores al descargarlo y tampoco tener problemas al instalar las dependencias, como algún caracter mal escrito, podemos utilizar el comando validate para verificar que todo está correctamente bien.
 ```sh
 php composer validate
+```
 
 Si a menudo realizas cambios en tus dependencias y las has instalado mediante el código fuente del repositorio, el comando status te permite comprobar si has hecho cambios en alguna de ellas, así como el git status nos indica qué archivos hemos modificado, este comando funciona de la misma manera:
 ```sh
 php composer status -v
+```
 
 Si añadimos la opción **-v** nos brinda información más detallada sobre los cambios producidos.
 ```sh
 You have changes in the following dependencies:
 vendor/seld/jsonlint:
 M README.mdown
+```
 
 El comando self-update actualiza el propio Composer a la versión más reciente, no tienes que realizar ningún otro paso más escribir en la consola lo siguiente:
 ```sh
 php composer self-update
-
+```
 Tendrás disponible la versión más actualizada del manejador.
 
 El comando config te permite editar varias opciones de Composer, tanto en el archivo local del proyecto como en el archivo global.
 ```sh
 php composer config --list
+```
 
 El comando create-project crea un nuevo proyecto, es necesario pasar como parámetros el vendor y package correspondiente. Esto es lo mismo que descargar el proyecto y después ejecutar el archivo composer.json que venga en él, el siguiente ejemplo crea un proyecto de laravel.
 ```sh
 php composer create-project laravel/laravel mi-proyecto
+```
 
 Ahora, si necesitas actualizar tu archivo autoloader porque tienes nuevas clases puedes hacerlo con el comando dump-autoload, es como ejecutar install o update, pero la ventaja es que puedes especificar que se cree un arreglo de todas las clases del proyecto con sus respectivos archivos, de la siguiente manera:
 ```sh
 php composer dump-autoload --optimize
+```
 
 El comando run-script permite ejecutar manualmente alguno de los scripts definidos por algún paquete.
 ```sh
 php composer run-script nombre-script --no-dev
-
+```
 Hemos agregado –no-dev para desactivar el modo de desarrollo.
 
 Utiliza el comando help para ver información sobre el comando solicitado.
@@ -202,4 +217,4 @@ php composer help install
 El comando remove sirve para eliminar alguna dependencia que ya no utilicemos, de la siguiente manera:
 ```sh
 php composer remove vendor/package
-
+```
