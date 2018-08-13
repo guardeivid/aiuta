@@ -54,9 +54,9 @@ Host <host>
 	Users/<user>/           <username>
 	PubkeyAuthentication    yes
 	IdentityFile 			~/.ssh/id_rsa_xxx
-	TCPKeepAlive 			yes
-	IdentitiesOnly 			yes
-	Port					<port>
+	TCPKeepAlive            yes
+	IdentitiesOnly          yes
+	Port                    <port>
 ```
 
 
@@ -138,8 +138,8 @@ Host gitlab.com
 	Users                   git
 	PubkeyAuthentication    yes
 	IdentityFile 			~/.ssh/id_rsa_xxx
-	TCPKeepAlive 			yes
-	IdentitiesOnly 			yes
+	TCPKeepAlive            yes
+	IdentitiesOnly          yes
 ```
 
 Copiar la clave publica en el repositorio
@@ -175,9 +175,9 @@ Host github.com
 	HostName                github.com
 	User                    git
 	PubkeyAuthentication    yes
-	IdentityFile 			~/.ssh/id_rsa_xxx
-	TCPKeepAlive 			yes
-	IdentitiesOnly 			yes
+	IdentityFile            ~/.ssh/id_rsa_xxx
+	TCPKeepAlive            yes
+	IdentitiesOnly          yes
 ```
 
 Copiar la clave publica en el repositorio
