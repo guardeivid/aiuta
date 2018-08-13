@@ -34,7 +34,8 @@ Con la opción **-n** simula la operación pero no la realiza
 ssh-copy-id -i ~/.ssh/id_rsa_xxx.pub -n <username>@<host> -p <port>
 ```
 > **-i** especifica la clave publica, por defecto es ~/.ssh/id_rsa.pub
-> **<host>** direccion ip o nombre de dominio
+
+> **host** direccion ip o nombre de dominio
 
 
 ### Configuración previa 
@@ -49,9 +50,9 @@ Al archivo agregar
 ```config
 
 Host <host>
-	HostName				<host>
-	Users/<user>/			<username>
-	PubkeyAuthentication 	yes
+	HostName                <host>
+	Users/<user>/           <username>
+	PubkeyAuthentication    yes
 	IdentityFile 			~/.ssh/id_rsa_xxx
 	TCPKeepAlive 			yes
 	IdentitiesOnly 			yes
@@ -63,7 +64,7 @@ Host <host>
 ```sh
 ssh <username>@<host> -p <port>
 
-# Directamente ahora con
+# Al estar en el archivo config ahora se puede conectar directamente con
 ssh <host>
 ```
 
@@ -133,9 +134,9 @@ Al archivo agregar
 ```config
 # GitLab.com server
 Host gitlab.com
-	HostName				gitlab.com
-	Users					git
-	PubkeyAuthentication 	yes
+	HostName                gitlab.com
+	Users                   git
+	PubkeyAuthentication    yes
 	IdentityFile 			~/.ssh/id_rsa_xxx
 	TCPKeepAlive 			yes
 	IdentitiesOnly 			yes
@@ -171,9 +172,9 @@ ssh-add ~/.ssh/id_rsa_xxx
 ```config
 # GitHub.com server
 Host github.com
-	HostName 				github.com
-	User					git
-	PubkeyAuthentication 	yes
+	HostName                github.com
+	User                    git
+	PubkeyAuthentication    yes
 	IdentityFile 			~/.ssh/id_rsa_xxx
 	TCPKeepAlive 			yes
 	IdentitiesOnly 			yes
