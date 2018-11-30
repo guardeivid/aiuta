@@ -67,6 +67,7 @@ exit $RESULT
 Descargar y correr [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe)
 
 > Problema al instalar en MS4W
+
 > Para ejecutar es necesario que el directorio cgi-bin este en la variable PATH, para eso ejecutar setenv.bat
 
 - Copiar el archivo **ms4w/Apache/cgi-bin/php.ini** y **ms4w/Apache/cgi-bin/php5ts.dll** a la carpeta **ms4w/tools/php**
@@ -77,20 +78,28 @@ cp \ms4w\Apache\cgi-bin\php5ts.dll \ms4w\tools\php
 ```
 
 ##### Instalación
-1- Install Options
+1. Install Options
+
   [ ] Developer Mode
-2- Setting Check (en ms4w selecciionar el archivo **C:\ms4w\tools\php\php.exe** si genera error Unable to load dynamic library, entonces comentar las extensiones que no puede cargar desde el archivo php.ini)
-3- Proxy Settings
+  
+2. Setting Check (en ms4w selecciionar el archivo **C:\ms4w\tools\php\php.exe** si genera error Unable to load dynamic library, entonces comentar las extensiones que no puede cargar desde el archivo php.ini)
+
+3. Proxy Settings
+
   [ ] Use a proxy server
-4- Install
+4. Install
+
  Automaticamente agregar a PATH (Add to System path: C:\ms4w\tools\php)
-5- Abrir la consola
-6- Cerrar todas las ventanas del Explorador de Windows. Abrir otra consola
-7- Logoof y login y volver a abrir otra consola
+ 
+5. Abrir la consola
+
+6. Cerrar todas las ventanas del Explorador de Windows. Abrir otra consola
+
+7. Logoof y login y volver a abrir otra consola
 
 ##### Setear variable de entorno PATH para composer si es que no la agregó automáticamente
 EL archivo se instala en **C:\ProgramData\ComposerSetup\bin**
-1- Equipo -> Propiedades -> Opciones Avanzadas del sistema -> Variables de entorno
+1. Equipo -> Propiedades -> Opciones Avanzadas del sistema -> Variables de entorno
 
 ### Iniciar proyecto composer
 - Crear un archivo **`composer.json`**, en Node.js está package.json.
