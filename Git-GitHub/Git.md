@@ -425,6 +425,10 @@ cd path_proyecto
 rm -rf .git
 ```
 
+### No registrar cambios remotamente de un archivo que se modifica localmente
+```
+git update-index --skip-worktree FILENAME
+```
 
 ## Links de interés
 - [Pro Git book en español](https://git-scm.com/book/es/v1/)
