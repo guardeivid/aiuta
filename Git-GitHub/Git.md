@@ -430,6 +430,17 @@ rm -rf .git
 git update-index --skip-worktree FILENAME
 ```
 
+### Crear etiquetas (ligeras)
+```
+git tag v1.0
+```
+
+#### Enviando etiqueta remotamente
+```
+git push v1.0
+```
+
+
 ## Links de interés
 - [Pro Git book en español](https://git-scm.com/book/es/v1/)
 - [git - la guía sencilla](http://rogerdudler.github.io/git-guide/index.es.html)
